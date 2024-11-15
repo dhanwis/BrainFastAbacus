@@ -3,7 +3,8 @@ from .views import *
 urlpatterns = [
     
     path('',Home,name="Hpmepage"),
-    path('dashboard/',dashboard,name="dashboard"),
-    path('logout/',logout,name="logout"),
+    path('admin/login/',admin_login,name="admin_login"),
+    path('logout/',logout_view,name="logout"),
+    
     
 ]
