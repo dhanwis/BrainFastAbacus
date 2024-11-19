@@ -31,3 +31,14 @@ def image_add(request):
         'current_page': current_page,
     } 
     return render(request, 'admin/imageadd.html', context)
+
+
+@login_required(login_url='/admin/login/')    
+def image_list(request):
+    current_page = 'imagelist'
+    # windows = Window.objects.all()
+    # context = {
+    #     'current_page': current_page,
+    #     'windows': windows
+    #     }
+    return render(request, 'admin/imagelist.html')
