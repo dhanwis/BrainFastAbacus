@@ -1,287 +1,894 @@
+{% load static %}
+
 <!DOCTYPE html>
+<html lang="zxx">
+    
 
-<html lang="en">
 <head>
-    <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BRAINFAST - Abacus & Vedic Training</title>
 
-    <title>BRAIN FAST ABACUS</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="description">
-    <meta content="http://webthemez.com" name="author">
-	<!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-    <link href="css/jcarousel.css" rel="stylesheet">
-    <link href="css/flexslider.css" rel="stylesheet">
-    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-   
-</head>
+		<!-- CSS Files -->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/scrollCue.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/remixicon.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
 
-<body>
-    <div class="home-page" id="wrapper">
-        <!-- start header -->
+        <link href="{% static 'assets/img/favicon.png' %}" type="image/x-icon" rel="icon">
+    </head>
 
-        <header>
-            <div class="navbar navbar-default navbar-static-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button class="navbar-toggle" data-target=
-                        ".navbar-collapse" data-toggle="collapse" type=
-                        "button"><span class="icon-bar"></span> <span class=
-                        "icon-bar"></span> <span class=
-                        "icon-bar"></span></button> <a class="navbar-brand"
-                        href="index.html"><img alt="logo" src=
-                        "img/logo.png"></a>
+    <body>
+
+        <!-- Start Top Header Area -->
+        <div class="top-header-area">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="top-header-list">
+                            <ul class="list-unstyled ps-0 mb-0">
+                                <li class="d-inline-block">
+                                    <a class="text-decoration-none d-flex align-items-center" href="tel:45993939990">
+                                        <i class="flaticon-call"></i>
+                                        +459 9393 9990
+                                    </a>
+                                </li>
+                                <li class="d-inline-block">
+                                    <a class="text-decoration-none d-flex align-items-center" href="#">
+                                        <i class="ri-message-line"></i>
+                                        <span class="__cf_email__" data-cfemail="d1b9b4bdbdbeb0b5bcb091b6bcb0b8bdffb2bebc">brainfast@gmail.com</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href="index.php">Home</a>
-                            </li>
-
-                          <li>
-                                <a href="about.php">About Us</a> 
-                            </li>
-
-                            <li>
-                                <a href="courses.php">Courses</a>
-                            </li>
-
-                            <li>
-                                <a href="franchisee.php">Franchisee</a>
-                            </li>
-
-                            <li>
-                                <a href="gallery.php">Gallery</a>
-                            </li>
-                           
-
-                            <li>
-                                <a href="contact.php">Contact</a>
-                            </li>
-                        </ul>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="top-header-social-list text-end">
+                            <ul class="list-unstyled ps-0 mb-0">
+                                <li class="d-inline-block">
+                                    <ul class="list-unstyled ps-0 mb-0 pages-link">
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="faculty.html">Franchise Enquiry</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="university-life.html">Admission Enquiry</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="login.html">TTC Enquiry</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="d-inline-block">
+                                    <ul class="list-unstyled ps-0 mb-0 social-link">
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="https://www.facebook.com/" target="_blank">
+                                                <i class="flaticon-facebook-app-symbol"></i>
+                                            </a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="https://www.pinterest.com/" target="_blank">
+                                                <i class="flaticon-pinterest"></i>
+                                            </a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="https://www.instagram.com/" target="_blank">
+                                                <i class="flaticon-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="https://twitter.com/" target="_blank">
+                                                <i class="flaticon-twitter"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-               
-            </div><div style="background-color:#00CED1; color:#FFF;"> <marquee> <b><?php
-	  include("./connect.php");
+            </div>
+        </div>
+        <!-- End Top Header Area -->
 
-  $sql=("select * from  scrollnews;");
+        <!-- Start Navbar Area --> 
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img class="black-logo" src="{% static 'assets/img/black-logo.png' %}" alt="black-logo">
+                </a>
+                <a class="navbar-toggler text-decoration-none" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button" aria-controls="navbarOffcanvas">
+                    <span class="burger-menu">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span> 
+                        <span class="bottom-bar"></span>
+                    </span>
+                </a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
 
-$rst = mysqli_query($conn,$sql);
- $i=0;
- while($row = mysqli_fetch_array($rst))
-{ ?>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link active">
+                                Home
+                            </a>
+                           
+                        </li>
 
-       <?php echo " *  " . $row["scrollNews"]; ?>
- 
-      <?php
-}
-?>
-        </b>    </marquee></div>
-        </header><!-- end header -->
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                About Us
+                            </a>
+                           
+                        </li>
+                        
+                       
 
-        <section id="banner">
-            <!-- Slider -->
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                    <li class="nav-item ">
+                                    <a href="programs.html" class="nav-link">
+                                        Abacus Training
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="program-details.html" class="nav-link">
+                                        Vedic Maths Trainin
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </li>
 
-            <div class="flexslider" id="main-slider">
-                <ul class="slides">
-                <li>
-                        <img alt="" src="img/slides/2.jpg">
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                Events
+                            </a>
+                           
+                        </li>
 
-                        <div class="flex-caption wow fadeInRight animated" data-wow-animation-name="none">
-                            <h3></h3>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                Gallery
+                            </a>
+                            
+                        </li>
 
-                            <p></p>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Contact <span>Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                   
+                            </div>
                         </div>
-                    </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar Area -->
+
+        <!-- Start Search Modal -->
+        <div class="modal fade searchModal" id="searchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form class="position-relative">
+                        <input type="text" class="input-search d-block w-100 bg-transparent" placeholder="Search here....">
+                        <button type="submit" class="border-0 p-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_12_4315)">
+                                    <path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.867 18 18 14.867 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18ZM19.485 18.071L22.314 20.899L20.899 22.314L18.071 19.485L19.485 18.071Z" fill="white"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </form>
+                    <button type="button" class="btn-close rounded-0 p-0 w-auto h-auto" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ri-close-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- End Search Modal -->
         
-                    <li>
-                        <img alt="" src="img/slides/1.jpg">
+        <!-- Start Responsive Navbar Area -->
+        <div class="responsive-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1" id="navbarOffcanvas">
+            <div class="offcanvas-header">
+                <a href="index.html" class="logo d-inline-block">
+                    <img src="assets/img/white-logo.png" alt="logo">
+                </a>
+                <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="ri-close-fill"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="responsive-menu">
 
-                        <div class="flex-caption wow fadeInLeft animated" data-wow-animation-name="none">
-                            <h3>Brain Fast Abacus</h3>
+                    <li class="responsive-menu-list active"><a href="javascript:void(0);">Home</a>
+                   
+                    </li>
+                    
+                      <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                About Us
+                            </a>
+                           
+                        </li>
+                        
+                       
 
-                            <p>The perfect tool for your mind</p>
-                        </div>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                    <li class="nav-item ">
+                                    <a href="programs.html" class="nav-link">
+                                        Abacus Training
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="program-details.html" class="nav-link">
+                                        Vedic Maths Trainin
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                Events
+                            </a>
+                           
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                Gallery
+                            </a>
+                            
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Contact <span>Us</span>
+                            </a>
+                        </li>
+                    
+                        </ul>
                     </li>
 
-                    <li>
-                        <img alt="" src="img/slides/3.jpg">
-
-                        <div class="flex-caption wow fadeInRight animated" data-wow-animation-name="none">
-                            <h3></h3>
-
-                            <p></p>
-                        </div>
+                   
+                    <li class="responsive-menu-list without-icon">
+                        <a href="contact.html" class="nav-link">
+                            Contact <span>Us</span>
+                        </a>
                     </li>
                 </ul>
-            </div><!-- end slider -->
-        </section>
 
-        <section class="hero-text">
+                <div class="others-option d-md-flex align-items-center">
+                    <div class="option-item">
+                        <form class="search-form">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Search Programs">
+                                <button type="submit"><i class="ri-search-line"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- End Responsive Navbar Area -->
+
+        <!-- Start Hero Area -->
+        <div class="hero-area">
+            <div class="container-fluid" data-cues="slideInUp">
+                <div class="hero-content">
+                    <div class="title">
+                        <h1>A World-Classes ABACUS <br>Training For Your Better Future</h1>
+                        <p>We are a Top 06 Canadian university and one of the Top 120 in the world. Find out what makes our student experience so rich, meaningful and life-changing.</p>
+                    </div>
+                    <ul class="list-unstyled ps-0 mb-0 hero-btn">
+                        <li class="d-inline-block">
+                            <a class="text-decoration-none default-btn" href="university-overview.html">
+                                Take A Tour
+                                <i class="flaticon-right-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="d-inline-block">
+                            <a class="text-decoration-none arrow-btn" href="program-details.html">
+                                View Our Programs
+                                <i class="flaticon-right-arrow"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+        <!-- End Hero Area -->
+
+         <!-- Start Adma About Area -->
+        <div class="adma-about-area pb-75">
             <div class="container">
-                <div class="row"> 
-
-                    <div class="col-lg-12 wow fadeInRight animated"
-                    data-wow-animation-name="none">
-                        <h1>Whole Brain Devolopment Programme</h1> 
-                        <p>Brain Fast Abacus offer a Specialised Course, that is proven as a brain development Programme. This training helps children to develop their listening skill, Speed and Accuracy, Concentration, memory Power, Creativity, Self Confidence, Imagination, Visualisation, Presentations, Observation ,learning Ability, All around Academic performance etc. </p><br/> 
-							<div class="btn-section"><a href="pro.pdf" class="btn-default">Download Brochure</a></div>
-                        
+                <div class="row align-items-center" data-cues="slideInUp">
+                    <div class="col-lg-7">
+                        <div class="adma-about-content">
+                            <div class="title">
+                                <h2 class="d-flex align-items-center">
+                                    <img src="{% static 'assets/img/title-shape.png' %}" alt="title-shape">
+                                    About BrainFast Abacus 
+                                </h2>
+                                <p>Brainfast Abacus & Vedics is an educational program designed to enhance mathematical skills in students
+through the use of the abacus, an ancient calculating tool. The program focuses on developing mental
+arithmetic abilities, improving concentration, and boosting overall cognitive skills. By using the abacus,
+students learn to visualize numbers and calculations, which helps them perform arithmetic operations
+quickly and accurately. Brainfast Abacus aims to build a strong foundation in math for students, making the
+learning process engaging and effective.
+ </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="adma-about-card">
+                                        <h3 class="d-flex align-items-center">
+                                            <i class="flaticon-globe-1"></i>
+                                            Our Mission
+                                        </h3>
+                                        <p>Our mission is to empower young minds with exceptional mathematical skills and cognitive
+abilities through innovative and engaging abacus training. We are committed to providing a
+supportive and nurturing learning environment that fosters confidence, concentration, creativity,
+and a lifelong love for learning. Our goal is to help 10,00,000 students unlock their full potential
+and achieve academic excellence.</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="adma-about-card">
+                                        <h3 class="d-flex align-items-center">
+                                            <i class="flaticon-trophy"></i>
+                                            Our Vision
+                                        </h3>
+                                        <p>Our vision at Brainfast Abacus & Vedic Maths is to become a globally recognized leader in Abacus
+and Vedic education, inspiring and transforming the lives of students worldwide. We envision a
+future where every child has the opportunity to excel in mathematics and develop critical thinking
+skills that will serve them in all areas of life. </p>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="adma-about-image text-end">
+                            <img src="{% static 'assets/img/about/about-2.jpg' %}" alt="about-image">
+                            <div class="shape-3">
+                                <img src="{% static 'assets/img/shape/shape-3.png' %}" alt="shape-3">
+                            </div>
+                            <div class="shape-4">
+                                <img src="{% static 'assets/img/shape/shape-4.png' %}" alt="shape-4">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <!-- End Adma About Area -->
 
-		
-        <section id="content">
+        <!-- Start Graduates Area -->
+        <div class="graduates-area pb-100">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="aligncenter">
-                            <h2 class="aligncenter">Please feel free to connect</h2>Lorem
-                            ipsum dolor sit amet, consectetur adipisicing elit.
-                            Dolores quae porro consequatur aliquam, incidunt
-                            eius magni provident, doloribus omnis minus
-                            ovident, doloribus omnis minus temporibus
-                            perferendis nesciunt..
-                        </div> 
+                <div class="section-title text-center m-auto">
+                    <h2>Brain Fast Abacus & Vedics Programme Highlights</h2>
+                </div>
+                <div class="row g-0 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-graduates-card">
+                            <h3 class="d-flex align-items-center">
+                                <i class="flaticon-science-1"></i>
+                                BrainFast Vedic Maths
+                            </h3>
+                            <p>Vedic Maths is an ancient system of mathematics that originated in India. It consists 
+of techniques and principles for solving mathematical problems in a faster and more 
+efficient manner compared to conventional methods.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-graduates-card">
+                            <h3 class="d-flex align-items-center">
+                                <i class="flaticon-mortarboard"></i>
+                                Brainfast Abacus
+                            </h3>
+                            <p>ABACUS make your brain stronger. Abacus is just not about math, it also helps you to develop Brain. When you need to do a lot of abacus, your brain cell connection grow from one cell to another.</p>
+                            <ul class="list-unstyled ps-0 mb-0 list">
+                               
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-graduates-card">
+                            <h3 class="d-flex align-items-center">
+                                <i class="flaticon-abc-block"></i>
+                               Abacus TTC
+                            </h3>
+                            <p> Brain Fast offers quick and step by step abacus teacher training course at a reasonable cost which is affordable to all. It has been prepared by the industry experts and the trainers & students are doing this course globally.</p>
+                            <ul class="list-unstyled ps-0 mb-0 list">
+                                
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- End Graduates Area -->
+        
 
-                <div class="row">
-                    <div class="skill-home">
-                        <div class="skill-home-solid clearfix">
-                            <div class="col-md-3 text-center"> 
-                                <span class="icons c1 fa fa-trophy" style=
-                                "font-style: italic"></span>
+ 
 
-                                <div class="box-area">
-                                    <h3> Student Enquiry</h3>
-
-                                   <a href="enquiry.php?mode=student"> <p>Click here..</p></a>
-                                </div> 
+        <!-- Start Apply Area -->
+        <div class="apply-area pt-100 pb-75">
+            <div class="container">
+                <div class="row align-items-center" data-cues="slideInUp">
+                    <div class="col-lg-6">
+                        <div class="apply-image">
+                            <div class="image">
+                                <img src="{% static 'assets/img/apply/apply-1.jpg' %}" alt="apply-image">
                             </div>
-
-                            <div class="col-md-3 text-center">
-                                <span class="icons c2 fa fa-picture-o" style=
-                                "font-style: italic"></span>
-
-                                <div class="box-area">
-                                    <h3>Franchisee </h3>
-<a href="enquiry.php?mode=franchisee"> <p>Click here..</p></a>            </div>
-                            </div>
-
-                            <div class="col-md-3 text-center">
-                                <span class="icons c3 fa fa-desktop" style=
-                                "font-style: italic"></span>
-
-                               <div class="box-area">
-                                    <h3>Faculty Enquiry</h3>
-
-                                  <a href="enquiry.php?mode=faculty"> <p>Click here..</p></a>
+                            <div class="user-help d-flex align-items-center">
+                                <a class="icon text-decoration-none" href="tel:45993939990">
+                                    <i class="ri-phone-line"></i>
+                                </a>
+                                <div class="content">
+                                    <span>For Help</span>
+                                    <a class="text-decoration-none d-block" href="tel:45993939990">
+                                        +459 9393 9990
+                                    </a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="apply-content">
+                            <div class="title">
+                                <h2>What We Offer</h2>
+                            </div>
+                            <div class="apply-content-card d-flex">
+                                <div class="icon">
+                                    <i class="flaticon-abacus"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <span>01.</span>
+                                        Abacus & Vedic Maths Training
+                                    </h3>
+                                    <p>Our specialized abacus training programs are designed to
+improve mental calculation abilities, enhance concentration, and boost overall cognitive skills</p>
+                                </div>
+                            </div>
+                            <div class="apply-content-card d-flex">
+                                <div class="icon">
+                                    <i class="flaticon-abacus"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <span>02.</span>
+                                        Experienced Instructors
+                                    </h3>
+                                    <p>Our team of expert instructors is passionate about teaching and
+committed to helping each student reach their full potential.</p>
+                                </div>
+                            </div>
+                            <div class="apply-content-card mb-0 border-bottom-0 d-flex">
+                                <div class="icon">
+                                    <i class="flaticon-abacus"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <span>03.</span>
+                                        Interactive Learning
+                                    </h3>
+                                    <p>We use a combination of traditional and modern teaching methods to make
+learning engaging and enjoyable</p>
+                                </div>
+                            </div>
+							
+							
+							 <div class="apply-content-card mb-0 border-bottom-0 d-flex">
+                                <div class="icon">
+                                    <i class="flaticon-abacus"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <span>04.</span>
+                                        Personalized Attention	
+                                    </h3>
+                                    <p>We understand that every student is unique, so we provide personalized
+attention to cater to individual learning needs.</p>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled ps-0 mb-0 apply-btn">
+                                <li class="d-inline-block">
+                                    <a class="text-decoration-none default-btn" href="application.html">
+                                        Chat With Us
+                                        <i class="flaticon-right-arrow"></i>
+                                    </a>
+                                </li>
+                                
+                                       
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Apply Area -->
 
-                            <div class="col-md-3 text-center">
-                                <span class="icons c4 fa fa-globe" style=
-                                "font-style: italic"></span>
-
-                                <div class="box-area">
-                                    <h3>Contact us </h3>
-
-                                    <a href="contact.php"> <p>Click here..</p></a>
+        <!-- Start Events Area -->
+        <div class="events-area pb-75">
+            <div class="container">
+                <div class="section-title text-center m-auto" data-cues="slideInUp">
+                    <h2>Events & Gallery</h2>
+                </div>
+                <div class="row justify-content-center" data-cues="slideInUp">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-events-card">
+                            <a class="text-decoration-none d-block image" href="event-details.html">
+                                <img src="{% static 'assets/img/events/events-1.jpg' %}" alt="events-image">
+                            </a>
+                            <div class="content d-flex align-items-top">
+                                <div class="date">
+                                    
+                                </div>
+                                <div class="title">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Annual Student Showcase & Talent Competition In Adma</a>
+                                    </h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-events-card">
+                            <a class="text-decoration-none d-block image" href="#">
+                                <img src="{% static 'assets/img/events/events-2.jpg' %}" alt="events-image">
+                            </a>
+                            <div class="content d-flex align-items-top">
+                                <div class="date">
+                                    <h2></h2>
+                                    <span></span>
+                                </div>
+                                <div class="title">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Promoting Physical & Mental Well Being Started From Now</a>
+                                    </h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-events-card">
+                            <a class="text-decoration-none d-block image" href="#">
+                                <img src="{% static 'assets/img/events/events-3.jpg' %}" alt="events-image">
+                            </a>
+                            <div class="content d-flex align-items-top">
+                                <div class="date">
+                                    
+                                </div>
+                                <div class="title">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Enterprneurship Summit & Startup Pitch Competition In Students</a>
+                                    </h3>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <!-- End Events Area -->
 
-        <section class="testimonial-area">
-            <div class="testimonial-solid">
-                <div class="container">
-                    <div class="testi-icon-area">
-                        <div class="quote fa fa-microphone" style=
-                        "font-style: italic"></div>
+			
+
+        <!-- Start Facilities Area -->
+        <div class="facilities-area pb-75">
+            <div class="container">
+                <div class="row align-items-center" data-cues="slideInUp">
+                    <div class="col-lg-6">
+                        <div class="facilities-content">
+                            <div class="title">
+                                <h2>Why Choose Us?
+</h2>
+                                <p>Join us at Brainfast Abacus & Vedics and be a part of our journey to create a generation of math
+enthusiasts and problem solvers. Together, we can unlock the true potential of young minds and
+pave the way for a brighter future.</p>
+                            </div>
+                            <div class="facilities-info">
+                                <h3>
+                                    <span>01.</span>
+                                   Proven Track Record
+                                </h3>
+                                <p>With years of experience and countless success stories, Brainfast Abacus
+Hub has established itself as a trusted name in math education.
+</p>
+                            </div>
+                            <div class="facilities-info">
+                                <h3>
+                                    <span>02.</span>
+                                    Holistic Development
+                                </h3>
+                                <p>Our programs are designed not just to improve math skills but also to
+enhance overall cognitive development.
+
+</p>
+                            </div>
+							
+							<div class="facilities-info">
+                                <h3>
+                                    <span>03.</span>
+                                    Community Focus
+                                </h3>
+                                <p>We are committed to making a positive impact in our community by offering
+affordable and accessible education to all students.</p>
+                            </div>
+                           <div class="d-inline-block">
+                                <a class="text-decoration-none default-btn" href="application.html">
+                                    Application Form
+                                    <i class="flaticon-right-arrow"></i>
+                                </a>
+                           </div>
+                        </div>
                     </div>
-
-                    <div class="carousel slide" data-ride="carousel" id=
-                    "carousel-example-generic">
-                        <ol class="carousel-indicators">
-                            <li class="" data-slide-to="0" data-target=
-                            "#carousel-example-generic">
-                                <a href="#"></a>
-                            </li>
-
-                            <li class="" data-slide-to="1" data-target=
-                            "#carousel-example-generic">
-                                <a href="#"></a>
-                            </li>
-
-                            <li class="active" data-slide-to="2" data-target=
-                            "#carousel-example-generic">
-                                <a href="#"></a>
-                            </li>
-
-                            <li class="" data-slide-to="3" data-target=
-                            "#carousel-example-generic">
-                                <a href="#"></a>
-                            </li>
-                        </ol>
-
-                        <div class="carousel-inner">
-                            <div class="item">
-                                <p>It is a wonderful technique. i am seeing significant changes in my son who is in 3rd std. Let our children improve mathematics by enjoying through Abacus. I strongly recommend abacus for students below 12 years.</p>
-
-                                <p style="font-weight: bold">- Dr.K.C.Santhosh Kumar, BHMS Mattannur kannur,Kerala- -</p>
+                    <div class="col-lg-6">
+                        <div class="facilities-image">
+                            <img src="{% static 'assets/img/facilities/facilities-1.jpg' %}" alt="facilities-image">
+                            <div class="facilities-image-info">
+                                <i class="flaticon-quote"></i>
+                                <p>Incorporating Vedic Maths into the training at Brainfast Abacus & Vedic Hub can 
+help students achieve a higher level of mathematical proficiency and confidence, 
+aligning with your mission to help 1000,000 students excel in math</p>
                             </div>
-
-                            <div class="item">
-                                <p>Abacus Learning at a very young age, is useful in activating brain of kids.."We can activate the nerve cells by providing stimulli" like moving fingers and talking aloud.</p>
-
-                                <p style="font-weight: bold">- Dr. Toshio Hayashi- Director RIAST
-                              -</p>
-                            </div>
-
-                            <div class="item active">
-                                <p>Abacus training is very useful to empower memory capacity</p>
-
-                                <p style="font-weight: bold">- Ubaid manaikkal Director MICE Computers Kannur
-                                -</p>
-                            </div>
-
-                           
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <!-- End Facilities Area -->
 
-		    <section class="container-fluid">
-		      <div class="container container-pad" id="property-listings">
-		        <div class="row">
-		          <div class="container container-pad" id="property-listings2">
-		            <div class="row">
-		              <!-- /.feature image -->
-		              <div class="col-md-6 feature-2-pic wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"> <img src="img/img1.jpg" alt="image" class="img-responsive"> </div>
-		              <!-- /.feature content -->
-		              <div class="col-md-6 wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
-		                <h2>What is  Brain Fast abacus</h2>
-		                <p>Abacus makes your brain stronger.  Abacus is not just about math, it also helps you to develop your brain. When you need to do a lot of abacus, your brain cells work a lot and new brain cell connections grow from  one cell to another. These new connections mean that your brain become smarter. You can defeat yourself  by using your brain.. </p>
-		                <div class="btn-section"><a href="pro.pdf" class="btn-default">Learn More</a></div>
-	                  </div>
-	                </div>
-	              </div>
-		        </div>
-		      </div>
-		      <!-- End container -->
-    </section>
-		
-       <?php
-	   include("footer.php");
-	   ?>
+        <!-- Start Testimonial Area -->
+        <div class="testimonial-area pb-75">
+            <div class="container">
+                <div class="section-title text-center m-auto">
+                    <h2>What Student’s Say</h2>
+                </div>
+                <div class="row align-items-center data-cues="slideInUp">
+                    <div class="col-lg-4">
+                        <div class="testimonial-image">
+                            <img src="{% static 'assets/img/testimonial/testimonial-1.jpg' %}" alt="testimonial-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="testimonial-slider-info">
+                            
+                            <div class="swiper testimonial2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-slider-item">
+                                            <ul class="list-unstyled ps-0 star-icon">
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                            </ul>
+                                            <p>Universities value students who can think critically and solve problems. Reviewers may assess a student's ability to analyze information, evaluate different perspectives, and apply logical reasoning to arrive at solutions. Many university programs involve group projects or collaborative activities.</p>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="user d-flex align-items-center">
+                                                    <div class="image">
+                                                        <img src="{% static 'assets/img/testimonial/testimonial-3.jpg' %}" alt="testimonial-image">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h3>John Smith</h3>
+                                                        <span>Adma’s student</span>
+                                                    </div>
+                                                </div>
+                                                <div class="quote-icon">
+                                                    <i class="flaticon-quote"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-slider-item">
+                                            <ul class="list-unstyled ps-0 star-icon">
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                            </ul>
+                                            <p>Universities value students who can think critically and solve problems. Reviewers may assess a student's ability to analyze information, evaluate different perspectives, and apply logical reasoning to arrive at solutions. Many university programs involve group projects or collaborative activities.</p>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="user d-flex align-items-center">
+                                                    <div class="image">
+                                                        <img src="{% static 'assets/img/testimonial/testimonial-4.jpg' %}" alt="testimonial-image">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h3>James Harris</h3>
+                                                        <span>Adma’s student</span>
+                                                    </div>
+                                                </div>
+                                                <div class="quote-icon">
+                                                    <i class="flaticon-quote"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-slider-item">
+                                            <ul class="list-unstyled ps-0 star-icon">
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                            </ul>
+                                            <p>Universities value students who can think critically and solve problems. Reviewers may assess a student's ability to analyze information, evaluate different perspectives, and apply logical reasoning to arrive at solutions. Many university programs involve group projects or collaborative activities.</p>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="user d-flex align-items-center">
+                                                    <div class="image">
+                                                        <img src="{% static 'assets/img/testimonial/testimonial-2.jpg' %}" alt="testimonial-image">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h3>David Wilson</h3>
+                                                        <span>Adma’s student</span>
+                                                    </div>
+                                                </div>
+                                                <div class="quote-icon">
+                                                    <i class="flaticon-quote"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-slider-item">
+                                            <ul class="list-unstyled ps-0 star-icon">
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                                <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
+                                            </ul>
+                                            <p>Universities value students who can think critically and solve problems. Reviewers may assess a student's ability to analyze information, evaluate different perspectives, and apply logical reasoning to arrive at solutions. Many university programs involve group projects or collaborative activities.</p>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="user d-flex align-items-center">
+                                                    <div class="image">
+                                                        <img src="{% static 'assets/img/testimonial/testimonial-6.jpg' %}" alt="testimonial-image">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h3>Jessica Clark</h3>
+                                                        <span>Adma’s student</span>
+                                                    </div>
+                                                </div>
+                                                <div class="quote-icon">
+                                                    <i class="flaticon-quote"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="thumbs-arrow d-flex align-items-center justify-content-between">
+
+                                <div class="next-prev-arrow d-flex align-items-center">
+                                    <div class="next">
+                                        <i class="flaticon-left-arrow"></i>
+                                    </div>
+                                    <div class="prev">
+                                        <i class="flaticon-right-arrow"></i>
+                                    </div>
+                                </div>
+
+                                <div thumbsSlider="" class="swiper testimonial">
+                                    <div class="swiper-wrapper justify-content-end">
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item-image">
+                                                <img src="{% static 'assets/img/testimonial/testimonial-3.jpg' %}" alt="testimonial-image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item-image">
+                                                <img src="{% static 'assets/img/testimonial/testimonial-4.jpg' %}" alt="testimonial-image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item-image">
+                                                <img src="{% static 'assets/img/testimonial/testimonial-5.jpg' %}" alt="testimonial-image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item-image">
+                                                <img src="{% static 'assets/img/testimonial/testimonial-6.jpg' %}" alt="testimonial-image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Testimonial Area -->
+
+     
+        
+        <!-- Start Footer Area -->
+       
+        <!-- Start Copyright Area -->
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row align-items-center" data-cues="slideInUp">
+                    <div class="col-lg-2 col-sm-12">
+                        <div class="copyright-logo">
+                            <a class="text-decoration-none" href="#">
+                                <img src="{% static 'assets/img/black-logo.png' %}" alt="black-logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-sm-6">
+                        <div class="copyright-title text-end">
+                            <p>© <strong>BRAIN FAST ABACUS AND VEDIC ACADEMY</strong> | Dhanwis Techinfo Solutions</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-sm-6">
+                        <div class="copyright-list text-end">
+                            <ul class="list-unstyled ps-0 mb-0">
+                                <li class="d-inline-block">
+                                    <a class="text-decoration-none" href="university-life.html">Students</a>
+                                </li>
+                                <li class="d-inline-block">
+                                    <a class="text-decoration-none" href="faculty.html">Faculty</a>
+                                </li>
+                                <li class="d-inline-block">
+                                    <a class="text-decoration-none" href="university-overview.html">Research</a>
+                                </li>
+                                <li class="d-inline-block">
+                                    <a class="text-decoration-none" href="university-life.html">Community</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Area -->
+
+        <!-- Back to Top -->
+        <button type="button" id="back-to-top">
+            <i class="ri-arrow-up-double-fill"></i>
+        </button>
+        <!-- End Back to Top -->
+
+        <!-- Js Files -->
+        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+        <script src="{% static 'assets/js/fslightbox.js' %}"></script>
+        <script src="{% static 'assets/js/scrollCue.min.js' %}"></script>
+        <script src="{% static 'assets/js/custom.js' %}"></script>
+    </body>
+
+<!-- Mirrored from templates.hibotheme.com/adma/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 09:34:16 GMT -->
+</html>
