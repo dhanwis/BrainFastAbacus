@@ -1074,10 +1074,13 @@ Hero Area Style
   margin-bottom: 45px;
 }
 .hero-content .title h1 {
-      font-size: 61px;
+      font-size: 63px;
     line-height: 1.2;
     margin-bottom: 25px;
     color: #193782;
+    font-weight: bold;
+    
+    
 }
 .hero-content .title p {
   font-size: 18px;
