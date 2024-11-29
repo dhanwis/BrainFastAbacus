@@ -107,6 +107,7 @@ p {
 }
 p:last-child {
   margin-bottom: 0;
+  color: rgb(32, 32, 32);
 }
 
 .form-control:focus {
@@ -270,7 +271,7 @@ Section Title Style
 Top Header Area Style
 =================================================*/
 .top-header-area {
-  background-color: #d8261c;
+  background-color: #d8271d;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -432,7 +433,7 @@ Navbar Area Style
   color: var(--blackColor);
   transition: var(--transition);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 15px;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -715,7 +716,7 @@ Navbar Area Style
   margin: 0;
 }
 .navbar.style-3 .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
-  color: var(--whiteColor);
+  color: var(--primaryColor);
 }
 .navbar.style-3 .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar.style-3 .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link:hover {
   color: var(--secenderyColor);
@@ -822,8 +823,8 @@ Responsive Navbar
 }
 .responsive-navbar .offcanvas-header .close-btn {
   transition: var(--transition);
-  color: var(--whiteColor);
-  font-size: 20px;
+  color: #d8261c;
+  font-size: 30px;
   cursor: pointer;
   top: 2px;
 }
@@ -832,6 +833,7 @@ Responsive Navbar
 }
 .responsive-navbar .offcanvas-body {
   padding: 30px;
+
 }
 .responsive-navbar .offcanvas-body ul {
   list-style-type: none;
@@ -853,7 +855,7 @@ Responsive Navbar
   top: 50%;
   right: 0;
   content: "\ea4e";
-  color: var(--whiteColor);
+  color:var(--whiteColor);
   position: absolute;
   transform: translateY(-50%);
   transition: var(--transition);
@@ -902,7 +904,7 @@ Responsive Navbar
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .responsive-navbar .offcanvas-body ul.responsive-menu .active > a {
-  color: var(--whiteColor);
+  color: #002A5C;
 }
 .responsive-navbar .offcanvas-body .others-option {
   margin-top: 50px;
@@ -1859,6 +1861,7 @@ Apply Area Style
   font-size: 42px;
   font-weight: bold;
   color: #002A5C;
+  margin-left: -50px;
 }
 .apply-content .apply-content-card {
   margin-bottom: 25px;
@@ -1940,6 +1943,7 @@ Apply Area Style
 }
 .apply-content.style-2 .title h2 {
   margin-bottom: 25px;
+  
 }
 .apply-content.style-2 .apply-content-card {
   margin-bottom: 30px;
@@ -2141,6 +2145,9 @@ Facilities Area Style
   margin-right: 95px;
   margin-bottom: 25px;
 }
+.facilities-area{
+  background-color: #a7c4c5d2;
+}
 .facilities-content .title {
   margin-bottom: 25px;
 }
@@ -2148,7 +2155,9 @@ Facilities Area Style
   font-size: 40px;
   font-weight: bold;
   line-height: 1.3;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  margin-left: 155px;
+  
   color: #002A5C;
 }
 .facilities-content .facilities-info {
