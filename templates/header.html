@@ -1,0 +1,256 @@
+{% load static %}
+        <!-- Start Top Header Area -->
+        <div class="top-header-area">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="top-header-list">
+                            <ul class="list-unstyled ps-0 mb-0">
+                                <li class="d-inline-block">
+                                    <a class="text-decoration-none d-flex align-items-center" href="tel:45993939990">
+                                        <i class="flaticon-call"></i>
+                                        +459 9393 9990
+                                    </a>
+                                </li>
+                                <li class="d-inline-block">
+                                    <a class="text-decoration-none d-flex align-items-center" href="#">
+                                        <i class="ri-message-line"></i>
+                                        <span class="__cf_email__" data-cfemail="d1b9b4bdbdbeb0b5bcb091b6bcb0b8bdffb2bebc">brainfast@gmail.com</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="top-header-social-list text-end">
+                            <ul class="list-unstyled ps-0 mb-0">
+                                <li class="d-inline-block">
+                                    <ul class="list-unstyled ps-0 mb-0 pages-link">
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="faculty.html">Franchise Enquiry</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="university-life.html">Admission Enquiry</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="login.html">TTC Enquiry</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="d-inline-block">
+                                    <ul class="list-unstyled ps-0 mb-0 social-link">
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="https://www.facebook.com/" target="_blank">
+                                                <i class="flaticon-facebook-app-symbol"></i>
+                                            </a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="https://www.pinterest.com/" target="_blank">
+                                                <i class="flaticon-pinterest"></i>
+                                            </a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="https://www.instagram.com/" target="_blank">
+                                                <i class="flaticon-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="text-decoration-none" href="https://twitter.com/" target="_blank">
+                                                <i class="flaticon-twitter"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Top Header Area -->
+
+        <!-- Start Navbar Area --> 
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img class="black-logo" src="{% static 'assets/img/black-logo.png' %}" alt="black-logo">
+                </a>
+                <a class="navbar-toggler text-decoration-none" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button" aria-controls="navbarOffcanvas">
+                    <span class="burger-menu">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span> 
+                        <span class="bottom-bar"></span>
+                    </span>
+                </a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item {% if current_page == 'Homepage' %}active{% endif %}">
+                            <a href="{% url 'Homepage' %}" class="dropdown-toggle nav-link">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                About Us
+                            </a>
+                           
+                        </li>
+                        
+                       
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                    <li class="nav-item ">
+                                    <a href="programs.html" class="nav-link">
+                                        Abacus Training
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="program-details.html" class="nav-link">
+                                        Vedic Maths Trainin
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                Events
+                            </a>
+                           
+                        </li>
+
+                        <li class="nav-item {% if current_page == 'gallery' %}active{% endif %}">
+                            <a href="{% url 'gallery' %}" class="dropdown-toggle nav-link">
+                                Gallery
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Contact 
+                            </a>
+                        </li>
+                    </ul>
+                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar Area -->
+
+             <!-- Start Search Modal -->
+             <div class="modal fade searchModal" id="searchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form class="position-relative">
+                            <input type="text" class="input-search d-block w-100 bg-transparent" placeholder="Search here....">
+                            <button type="submit" class="border-0 p-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_12_4315)">
+                                        <path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.867 18 18 14.867 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18ZM19.485 18.071L22.314 20.899L20.899 22.314L18.071 19.485L19.485 18.071Z" fill="white"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </form>
+                        <button type="button" class="btn-close rounded-0 p-0 w-auto h-auto" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="ri-close-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Search Modal -->
+            
+            <!-- Start Responsive Navbar Area -->
+            <div class="responsive-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1" id="navbarOffcanvas">
+                <div class="offcanvas-header">
+                    <a href="index.html" class="logo d-inline-block">
+                        <img src="{% static 'assets/img/white-logo.png' %}" alt="logo">
+                    </a>
+                    <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <i class="ri-close-fill"></i>
+                    </button>
+                </div>
+                <div class="offcanvas-body ">
+                    <ul class="responsive-menu">
+    
+                        <li class="responsive-menu-list active"><a href="javascript:void(0);">Home</a>
+                       
+                        </li>
+                        
+                          <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                    About Us
+                                </a>
+                               
+                            </li>
+                            
+                           
+    
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                    Courses
+                                </a>
+                                <ul class="dropdown-menu">
+                                        <li class="nav-item ">
+                                        <a href="programs.html" class="nav-link">
+                                            Abacus Training
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="program-details.html" class="nav-link">
+                                            Vedic Maths Training
+                                        </a>
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                    Events
+                                </a>
+                               
+                            </li>
+    
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                    Gallery
+                                </a>
+                                
+                            </li>
+    
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Contact <span>Us</span>
+                                </a>
+                            </li>
+                        
+                            </ul>
+                        </li>
+
+                    </ul>
+    
+                    <div class="others-option d-md-flex align-items-center">
+                        <div class="option-item">
+                            <form class="search-form">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Search Programs">
+                                    <button type="submit"><i class="ri-search-line"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- End Responsive Navbar Area -->

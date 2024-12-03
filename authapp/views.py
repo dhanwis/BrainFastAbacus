@@ -4,7 +4,8 @@ from django.contrib.auth import authenticate, login
 
 
 def Home(Request):
-    return render(Request,"index.html")
+    current_page = 'home'
+    return render(Request,"index.html",{ 'current_page': current_page})
 
 
 
@@ -25,3 +26,7 @@ def admin_login(request):
     else:
         error = None
     return render(request, 'admin/admin-login.html', {'error': error})
+
+def gallery(request):
+    current_page = 'gallery'
+    return render(request,'gallery.html', { 'current_page': current_page})
