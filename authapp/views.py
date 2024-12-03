@@ -30,3 +30,12 @@ def admin_login(request):
 def gallery(request):
     current_page = 'gallery'
     return render(request,'gallery.html', { 'current_page': current_page})
+
+
+def about(request):
+    current_page = 'about'
+    return render(request,'about.html', { 'current_page': current_page})
+
+def event(request):
+    current_page = 'event'
+    return render(request,'event.html', { 'current_page': current_page})

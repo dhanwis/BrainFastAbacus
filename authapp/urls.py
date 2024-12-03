@@ -5,7 +5,10 @@ urlpatterns = [
     path('',Home,name="Homepage"),
     path('admin/login/',admin_login,name="admin_login"),
     path('logout/',logout_view,name="logout"),
-    path('programs/',gallery,name="gallery")
+    path('gallery/',gallery,name="gallery"),
+    path('about/',about,name="about"),
+    path('event/',event,name="event"),
+    
     
     
 ]
