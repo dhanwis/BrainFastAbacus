@@ -4,7 +4,8 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='/admin/login/')  
 def dashboard(Request):
-    return render(Request,'admin/dashboard.html')
+    current_page = 'dashboard'
+    return render(Request,'admin/dashboard.html', { 'current_page': current_page})
 
 @login_required(login_url='/admin/login/')
 def image_add(request):

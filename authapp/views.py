@@ -39,3 +39,7 @@ def about(request):
 def event(request):
     current_page = 'event'
     return render(request,'event.html', { 'current_page': current_page})
+
+def contact(request):
+    current_page='contact'
+    return render(request,'contact.html',{'current_page':current_page})
