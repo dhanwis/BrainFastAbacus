@@ -34,13 +34,13 @@
                     </tr>
                   </thead>
                   <tbody>
-                    {% for gallery in gallerys %}
+                  {% for gallery in gallerys %}
                     <tr class="text-center">
                       <th scope="row">{{ forloop.counter }}</th>
                       <td>
                         {% if gallery.image %}
                             <a href="{{ gallery.image.url }}" target="_blank">
-                            <img src="{{ gallery.image.url}}" alt="" class="img-fluid" style="max-width: 100px;">
+                            <img src="{{ gallery.image.url }}" alt="" class="img-fluid" style="max-width: 100px;">
                             </a>
                         {% else %}
                             None
@@ -65,7 +65,7 @@
                         </span>
                       </td>
                     </tr>
-                    {% endfor %}
+                  {% endfor %}
                   </tbody>
               </table>
             </div>

@@ -15,7 +15,8 @@ def image_add(request):
     if request.method == 'POST':
         image = request.FILES.get('image') 
         try:
-            Gallery(image=image).save()
+            gallery= Gallery(image=image)
+            gallery.save()
             messages.success(request, 'image added successfully')
             return redirect('imagelist')
         except Exception as e:
@@ -38,14 +39,15 @@ def image_list(request):
         }
     return render(request, 'admin/imagelist.html',context)
 
+
 @login_required(login_url='/admin/login/')
 def image_view(request, image_id):
     current_page = 'imageview'
     try:
         gallery = Gallery.objects.get(id=image_id)
     except gallery.DoesNotExist:
-        messages.error(request, 'door not found')
-        return redirect('imagelist')
+        messages.error(request, 'image not found')
+        return redirect(image_list)
     context = {
         'current_page': current_page,
         'gallery':gallery
