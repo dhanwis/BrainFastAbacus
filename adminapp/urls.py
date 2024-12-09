@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import *
-from django.conf.urls.static import static
+
 
 urlpatterns = [
     
@@ -9,4 +9,3 @@ urlpatterns = [
     path('imagelist/',image_list,name='imagelist'),
     path('image/<int:image_id>/view/',image_view,name="imageview")
 ]
-
