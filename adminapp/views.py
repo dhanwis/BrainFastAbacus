@@ -6,8 +6,16 @@ from django.contrib import messages
 
 @login_required(login_url='/admin/login/')  
 def dashboard(Request):
+    image_count = Gallery.objects.count()
+    event_count = Event.objects.count()
     current_page = 'dashboard'
-    return render(Request,'admin/dashboard.html', { 'current_page': current_page})
+    context = {
+        'current_page': current_page,
+        'image_count':image_count,
+        'event_count':event_count
+    } 
+    
+    return render(Request,'admin/dashboard.html', context)
 
 @login_required(login_url='/admin/login/')
 def image_add(request):
@@ -53,3 +61,144 @@ def image_view(request, image_id):
         'gallery':gallery
     }
     return render(request, 'admin/imageview.html', context)
+
+@login_required(login_url='/admin/login/')
+def event_add(request):
+    current_page = 'eventadd'
+    if request.method == 'POST':
+        image = request.FILES.get('image') 
+        head = request.POST.get('head')
+        description = request.POST.get('description')
+        try:
+            event= Event(image=image,head=head,description=description)
+            event.save()
+            messages.success(request, 'event added successfully')
+            return redirect('dashboard')
+        except Exception as e:
+            messages.error(request, f'Error adding event: {e}')
+            return redirect('eventadd')
+        
+    context = {
+        'current_page': current_page,
+    } 
+    return render(request, 'admin/eventadd.html', context)
+
+@login_required(login_url='/admin/login/')    
+def event_list(request):
+    current_page = 'eventlist'
+    events = Event.objects.all()
+    context = {
+        'current_page': current_page,
+        'events': events
+        }
+    return render(request, 'admin/eventlist.html',context)
+
+@login_required(login_url='/admin/login/')    
+def image_edit(request, image_id):
+    current_page = 'imageedit'
+    try:
+        gallery = Gallery.objects.get(id=image_id)
+    except Gallery.DoesNotExist:
+        messages.error(request, 'image not found')
+        return redirect('imagelist')
+
+    if request.method == 'POST':
+        try:
+            image = request.FILES.get('image')
+              # Update the image field
+            if image:
+                gallery.image = image
+
+            gallery.save()
+            messages.success(request, 'image edited successfully')
+            return redirect('imagelist')
+        except Exception as e:
+            messages.error(request, f'Error editing image: {e}')
+            return redirect('imageedit', image_id=gallery.id) 
+
+    context = {
+        'current_page': current_page,
+        'gallery': gallery
+        }
+    return render(request, 'admin/editimage.html', context)
+
+@login_required(login_url='/admin/login/')   
+def event_edit(request, event_id):
+    current_page = 'window_edit'
+    try:
+        event = Event.objects.get(id=event_id)
+    except Event.DoesNotExist:
+        messages.error(request, 'event not found')
+        return redirect('eventlist')
+
+    if request.method == 'POST':
+        try:
+            image = request.FILES.get('image')
+            event.head = request.POST.get('head')
+            event.description = request.POST.get('description')
+            
+
+            # Update the image field
+            if image:
+                event.image = image
+
+            event.save()
+            messages.success(request, 'event edited successfully')
+            return redirect('eventlist')
+        except Exception as e:
+            messages.error(request, f'Error editing event: {e}')
+            return redirect('window_edit', event_id=event.id) 
+
+    context = {
+        'current_page': current_page,
+        'event': event
+        }
+    return render(request, 'admin/eventedit.html', context)
+
+
+@login_required(login_url='/admin/login/')
+def event_view(request, event_id):
+    current_page = 'eventview'
+    try:
+        event = Event.objects.get(id=event_id)
+    except event.DoesNotExist:
+        messages.error(request, 'image not found')
+        return redirect(image_list)
+    context = {
+        'current_page': current_page,
+        'event':event
+    }
+    return render(request, 'admin/eventview.html', context)
+
+@login_required(login_url='/admin/login/')
+def image_delete(request, image_id):
+    try:
+        gallery = Gallery.objects.get(id=image_id)
+    except Gallery.DoesNotExist:
+        messages.error(request, 'image not found')
+        return redirect('imagelist')
+    
+    try: 
+        gallery.delete()
+        messages.success(request, 'image deleted successfully')
+        return redirect('imagelist')
+    except Exception as e:
+        messages.error(request, f'Error deleting gallery: {e}')
+        return redirect('imagelist')
+    
+    
+@login_required(login_url='/admin/login/')    
+def event_delete(request, event_id):
+    try:
+        event = Event.objects.get(id=event_id)
+    except Event.DoesNotExist:
+        messages.error(request, 'event not found')
+        return redirect('eventlist')
+    
+    try: 
+        event.delete()
+        messages.success(request, 'event deleted successfully')
+        return redirect('eventlist')
+    except Exception as e:
+        messages.error(request, f'event deleting gallery: {e}')
+        return redirect('eventlist')

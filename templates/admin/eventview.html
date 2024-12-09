@@ -1,0 +1,45 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block content %}
+
+{% include 'admin/header.html' %}
+<div class="container-fluid py-4">
+  {% include 'admin/alert.html' %}
+    <div class="row">
+      <div class="col-12">
+        <div class="card mb-4">
+          <div class="card-header pb-0">
+            <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <!-- <h6 class="mb-0">door List</h6> -->
+                </div>
+              
+            </div>
+          </div>
+          <div class="card-body px-0 pt-0 pb-2">
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                  <a href="{{ event.image.url }}" target="_blank">
+                    <img src="{{ event.image.url }}" alt="" style="max-width: 200px;">
+                  </a>
+                   
+                </div>
+                <hr>
+                {% comment %} <div class="d-flex justify-content-center">
+                    <h3>{{ door.head }}</h3>
+                </div> {% endcomment %}
+                <hr>
+                {% comment %} <div class="text-center">
+                    {{ door.description }}
+                </div>
+                 {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+</main>
+
+{% endblock content %}

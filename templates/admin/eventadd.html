@@ -10,7 +10,7 @@
         <div class="card">
             <div class="card-header pb-0">
             <div class="d-flex align-items-center">
-                <p class="mb-0">Edit image </p>
+                <p class="mb-0">Add Event</p>
                 <!-- <button class="btn btn-primary btn-sm ms-auto">Settings</button> -->
             </div>
             </div>
@@ -22,39 +22,39 @@
                         <div class="col-md-6">
                         <div class="form-group">
                             <label for="id_image" class="form-control-label">Image: 410 x 388px</label>
-                            <input type="file" name="image"  class="form-control" >
+                            
+                            <input type="file" name="image" class="form-control" required>
                         </div>
                         </div>
                         <div class="col-md-6">
                         <div class="form-group">
                             <label for="id_head" class="form-control-label">Head:</label>
-                            {% comment %} <input type="text" name="head" value="{{ door.head }}" maxlength="500" class="form-control" > {% endcomment %}
-    
+                            <input type="text" name="head" maxlength="500" class="form-control" >
                         </div>
                         </div>
                         <div class="col-md-12">
                         <div class="form-group">
                             <label for="id_description" class="form-control-label">Description:</label>
-                            {% comment %} <textarea name="description" maxlength="1000" class="form-control" >{{ door.description }}</textarea> {% endcomment %}
+                            <textarea name="description" maxlength="1000" class="form-control" ></textarea>
                         </div>
                         </div>
                         <!-- <div class="col-md-12">
                             <div class="form-group">
                                 <label for="id_status" class="form-control-label">Status:</label>
-                                <input type="checkbox" name="status" {% if door.status %}checked{% endif %}>
+                                <input type="checkbox" name="status">
                             </div>
                         </div> -->
                         <div class="col-md-12 d-flex justify-content-end">
-                            <button class="btn btn-primary" type="submit">Edit image</button>
+                            <button class="btn btn-primary" type="submit">Add Event</button>
                         </div>
                     </div>
                 </form>
             
             </div>
         </div>
-    </div>        
+    </div>
+        
 </div>
-
 
 </main>
 {% endblock content %}

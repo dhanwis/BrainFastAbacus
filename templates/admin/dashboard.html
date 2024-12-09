@@ -16,7 +16,7 @@
               <div class="numbers">
                 <p class="text-sm mb-0 text-uppercase font-weight-bold">Total image</p>
                 <h5 class="font-weight-bolder mb-0 ">
-                  {{ door_count }}
+                  {{ image_count }}
                 </h5>
                 <!-- <p class="mb-0">
                   <span class="text-success text-sm font-weight-bolder">+55%</span>
@@ -41,7 +41,7 @@
               <div class="numbers">
                 <p class="text-sm mb-0 text-uppercase font-weight-bold">Toatal Events</p>
                 <h5 class="font-weight-bolder">
-                  {{ window_count }}
+                  {{ event_count }}
                 </h5>
                 <!-- <p class="mb-0">
                   <span class="text-success text-sm font-weight-bolder">+3%</span>
@@ -150,7 +150,7 @@
             </svg>
           </span>
           <span>
-            <a href="">Event Add</a>
+            <a href="{% url 'eventadd' %}">Event Add</a>
           </span>
         </li>
 
@@ -161,7 +161,7 @@
             </svg>
           </span>
           <span>
-            <a href="">Event List</a>
+            <a href="{% url 'eventlist' %}">Event List</a>
           </span>
         </li>
         <li class="pb-2">

@@ -237,64 +237,32 @@ efficient manner compared to conventional methods.</p>
                     <h2>Events & Gallery</h2>
                 </div>
                 <div class="row justify-content-center" data-cues="slideInUp">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-events-card">
-                            <a class="text-decoration-none d-block image" href="event-details.html">
-                                <img src="{% static 'assets/img/events/events-1.jpg' %}" alt="events-image">
-                            </a>
-                            <div class="content d-flex align-items-top">
-                                <div class="date">
-                                    
-                                </div>
-                                <div class="title">
-                                    <h3>
-                                        <a class="text-decoration-none" href="#">Annual Student Showcase & Talent Competition In Adma</a>
-                                    </h3>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-events-card">
-                            <a class="text-decoration-none d-block image" href="#">
-                                <img src="{% static 'assets/img/events/events-2.jpg' %}" alt="events-image">
-                            </a>
-                            <div class="content d-flex align-items-top">
-                                <div class="date">
-                                    <h2></h2>
-                                    <span></span>
-                                </div>
-                                <div class="title">
-                                    <h3>
-                                        <a class="text-decoration-none" href="#">Promoting Physical & Mental Well Being Started From Now</a>
-                                    </h3>
-                                   
+                    {% for event in events %}
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-events-card">
+                                <a class="text-decoration-none d-block image" href="#">
+                                    <img src="{{ event.image.url }}" alt="{{ event.title }}">
+                                </a>
+                                <div class="content d-flex align-items-top">
+                                    <div class="date">
+                                        <h2>{{ event.event_date|date:"d" }}</h2>
+                                        <span>{{ event.event_date|date:"F, Y" }}</span>
+                                    </div>
+                                    <div class="title">
+                                        <h3>
+                                            <a class="text-decoration-none" href="#">{{ event.description }}</a>
+                                        </h3>
+                                        <p>{{ event.|truncatewords:15 }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-events-card">
-                            <a class="text-decoration-none d-block image" href="#">
-                                <img src="{% static 'assets/img/events/events-3.jpg' %}" alt="events-image">
-                            </a>
-                            <div class="content d-flex align-items-top">
-                                <div class="date">
-                                    
-                                </div>
-                                <div class="title">
-                                    <h3>
-                                        <a class="text-decoration-none" href="#">Enterprneurship Summit & Startup Pitch Competition In Students</a>
-                                    </h3>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
+        
+        
         <!-- End Events Area -->
 
 			

@@ -53,15 +53,15 @@
                             </a>
                         </span>
                         <span>
-                          {% comment %} <a href="{% url 'door_edit' door.id %}"> {% endcomment %}
-                            {% comment %} <i class="bi bi-pencil-square"></i> {% endcomment %}
-                          {% comment %} </a> {% endcomment %}
+                          <a href="{% url 'imageedit' gallery.id %}">
+                            <i class="bi bi-pencil-square"></i>
+                          </a>
                         </span>
                         <span>
-                          {% comment %} <a href="{% url 'door_delete' door.id %}"  {% endcomment %}
-                            {% comment %} onclick="return confirm('Do you want to delete this image?')"> {% endcomment %}
-                            {% comment %} <i class="bi bi-trash3-fill text-danger"></i> {% endcomment %}
-                          {% comment %} </a> {% endcomment %}
+                          <a href="{% url 'imagedelete' gallery.id %}" 
+                            onclick="return confirm('Do you want to delete this image?')"> 
+                            <i class="bi bi-trash3-fill text-danger"></i> 
+                           </a> 
                         </span>
                       </td>
                     </tr>

@@ -1,11 +1,19 @@
 from django.shortcuts import *
 from django.contrib.auth import logout
 from django.contrib.auth import authenticate, login
+from adminapp.models import*
+from django.core.paginator import Paginator
 
 
 def Home(Request):
     current_page = 'home'
-    return render(Request,"index.html",{ 'current_page': current_page})
+    events = Event.objects.all()
+    context = {
+        'events': events,
+        'current_page':current_page
+        
+    }
+    return render(Request,"index.html",context)
 
 
 
@@ -27,9 +35,23 @@ def admin_login(request):
         error = None
     return render(request, 'admin/admin-login.html', {'error': error})
 
+# def gallery(request):
+#     current_page = 'gallery'
+#     return render(request,'gallery.html', { 'current_page': current_page})
 def gallery(request):
     current_page = 'gallery'
-    return render(request,'gallery.html', { 'current_page': current_page})
+    events = Gallery.objects.all() # Fetch events in descending order of creation
+    paginator = Paginator(events, 9)  # 6 events per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+   
+
+    context = {
+        'page_obj': page_obj,
+        'current_page':current_page
+        
+    }
+    return render(request, 'gallery.html', context)
 
 
 def about(request):
@@ -38,7 +60,18 @@ def about(request):
 
 def event(request):
     current_page = 'event'
-    return render(request,'event.html', { 'current_page': current_page})
+    events = Event.objects.all() # Fetch events in descending order of creation
+    paginator = Paginator(events, 9)  # 6 events per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+   
+
+    context = {
+        'page_obj': page_obj,
+        'current_page':current_page
+        
+    }
+    return render(request, 'event.html', context)
 
 def contact(request):
     current_page='contact'
