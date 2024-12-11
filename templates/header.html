@@ -27,13 +27,13 @@
                                 <li class="d-inline-block">
                                     <ul class="list-unstyled ps-0 mb-0 pages-link">
                                         <li class="d-inline-block">
-                                            <a class="text-decoration-none" href="faculty.html">Franchise Enquiry</a>
+                                            <a class="text-decoration-none" href="#">Franchise Enquiry</a>
                                         </li>
                                         <li class="d-inline-block">
-                                            <a class="text-decoration-none" href="university-life.html">Admission Enquiry</a>
+                                            <a class="text-decoration-none" href="#">Admission Enquiry</a>
                                         </li>
                                         <li class="d-inline-block">
-                                            <a class="text-decoration-none" href="login.html">TTC Enquiry</a>
+                                            <a class="text-decoration-none" href="#">TTC Enquiry</a>
                                         </li>
                                         
                                     </ul>
@@ -87,13 +87,13 @@
                     <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item {% if current_page == 'home' %}active{% endif %}">
-                            <a href="{% url 'Homepage' %}" class="dropdown-toggle nav-link">
+                            <a href="{% url 'Homepage' %}" class=" nav-link">
                                 Home
                             </a>
                         </li>
 
                         <li class="nav-item  {% if current_page == 'about' %}active{% endif %}">
-                            <a href="{% url 'about' %}" class="dropdown-toggle nav-link">
+                            <a href="{% url 'about' %}" class=" nav-link">
                                 About Us
                             </a>
                            
@@ -101,13 +101,13 @@
                         
                        
 
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                        <li class="nav-item  {% if current_page == 'abacuscourse' %}active{% endif %}">
+                            <a href="{% url 'abacuscourse' %}" class="dropdown-toggle nav-link">
                                 Courses
                             </a>
                             <ul class="dropdown-menu">
-                                    <li class="nav-item ">
-                                    <a href="programs.html" class="nav-link">
+                                    <li class="nav-item {% if current_page == 'abacuscourse' %}active{% endif %} ">
+                                    <a href="{% url 'abacuscourse' %}" class="nav-link">
                                         Abacus Training
                                     </a>
                                 </li>
@@ -126,20 +126,20 @@
                         </li>
 
                         <li class="nav-item {% if current_page == 'event' %}active{% endif %}">
-                            <a href="{% url 'event' %}" class="dropdown-toggle nav-link">
+                            <a href="{% url 'event' %}" class=" nav-link">
                                 Events
                             </a>
                            
                         </li>
 
                         <li class="nav-item {% if current_page == 'gallery' %}active{% endif %}">
-                            <a href="{% url 'gallery' %}" class="dropdown-toggle nav-link">
+                            <a href="{% url 'gallery' %}" class=" nav-link">
                                 Gallery
                             </a>
                         </li>
 
                         <li class="nav-item {% if current_page == 'contact' %}active{% endif %}">
-                            <a href="{% url 'contact' %}" class="dropdown-toggle nav-link">
+                            <a href="{% url 'contact' %}" class=" nav-link">
                                 Contact 
                             </a>
                         </li>
@@ -203,13 +203,13 @@
                             
                            
     
-                            <li class="nav-item">
-                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                            <li class="nav-item  {% if current_page == 'abacuscourse' %}active{% endif %}">
+                                <a href="{% url 'abacuscourse' %}" class="dropdown-toggle nav-link">
                                     Courses
                                 </a>
                                 <ul class="dropdown-menu">
                                         <li class="nav-item ">
-                                        <a href="programs.html" class="nav-link">
+                                        <a href="{% url 'abacuscourse' %}" class="nav-link">
                                             Abacus Training
                                         </a>
                                     </li>
@@ -222,22 +222,22 @@
                                 </ul>
                             </li>
                             <li class="nav-item {% if current_page == 'event' %}active{% endif %}">
-                                <a href="{% url 'event' %}" class="dropdown-toggle nav-link">
+                                <a href="{% url 'event' %}" class="nav-link">
                                     Events
                                 </a>
                                
                             </li>
     
                             <li class="nav-item {% if current_page == 'gallery' %}active{% endif %}">
-                                <a href="{% url 'gallery' %}" class="dropdown-toggle nav-link">
+                                <a href="{% url 'gallery' %}" class=" nav-link">
                                     Gallery
                                 </a>
                             </li>
     
     
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    Contact <span>Us</span>
+                            <li class="nav-item {% if current_page == 'contact' %}active{% endif %}">
+                                <a href="{% url 'contact' %}" class=" nav-link">
+                                    Contact 
                                 </a>
                             </li>
                         

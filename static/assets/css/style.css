@@ -2952,8 +2952,9 @@ Application Area Style
   color: var(--primaryColor);
 }
 .single-application-card .content h3 {
-  font-size: 18px;
+  font-size: 23px;
   margin-bottom: 15px;
+  
 }
 .single-application-card .content h3 span {
   margin-right: 4px;
