@@ -3942,6 +3942,7 @@ blockquote:hover i {
   font-size: 14px;
   font-weight: 700;
   font-family: "remixicon" !important;
+  
 }
 .tuition-info .tuition-item .accordion-item .accordion-button.collapsed {
   border-radius: unset;
@@ -4177,8 +4178,10 @@ blockquote:hover i {
   margin-bottom: 30px;
 }
 .privacy-policy-content .cards h1 {
-  font-size: 45px;
+  font-size: 43px;
   margin-bottom: 15px;
+  font-weight: bold;
+  color: #002a5c;
 }
 .privacy-policy-content .list-card {
   margin-bottom: 25px;
@@ -4186,6 +4189,8 @@ blockquote:hover i {
 .privacy-policy-content .list-card h3 {
   font-size: 28px;
   margin-bottom: 15px;
+  color: #002a5c;
+  font-weight: bold;
 }
 .privacy-policy-content .list-card ul li {
   padding-left: 25px;
@@ -4202,6 +4207,7 @@ blockquote:hover i {
 .privacy-policy-content .list-card ul li:last-child {
   margin-bottom: 0;
 }
+
 
 .blog-left-sidebar {
   margin-right: 12px;
@@ -4789,6 +4795,9 @@ Support Area CSS
   position: relative;
   padding-left: 30px;
   padding-bottom: 30px;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
 }
 .support-image::before {
   left: 0;
@@ -4800,7 +4809,9 @@ Support Area CSS
   position: absolute;
   background-color: var(--blackColor);
 }
-
+.support-image img {
+ 
+}
 .support-content {
   margin-bottom: 25px;
 }
@@ -4808,7 +4819,11 @@ Support Area CSS
   margin-bottom: 30px;
 }
 .support-content .title h2 {
-  font-size: 42px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #002a5c;
+  margin-bottom: 60px;
+  
 }
 .support-content .questions-content {
   margin-bottom: 45px;
@@ -4848,6 +4863,7 @@ Support Area CSS
   font-size: 14px;
   font-weight: 700;
   font-family: "remixicon" !important;
+  display: none;
 }
 .support-content .questions-content .accordion-item .accordion-button.collapsed {
   border-radius: unset;
