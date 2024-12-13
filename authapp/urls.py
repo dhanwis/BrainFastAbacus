@@ -9,7 +9,9 @@ urlpatterns = [
     path('about/',about,name="about"),
     path('event/',event,name="event"),
     path('contact/',contact,name="contact"),
-    path('abacuscourse/',abacuscourse,name="abacuscourse")
+    path('abacuscourse/',abacuscourse,name="abacuscourse"),
+    path('vedicmath/',vedicmath,name="vedicmath"),
+    
     
     
 ]
