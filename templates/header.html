@@ -101,7 +101,7 @@
                         
                        
 
-                        <li class="nav-item  {% if current_page == 'abacuscourse' %}active{% endif %}">
+                        <li class="nav-item {% if current_page == 'abacuscourse' or current_page == 'vedicmath' %}active{% endif %}">
                             <a href="{% url 'abacuscourse' %}" class="dropdown-toggle nav-link">
                                 Courses
                             </a>
