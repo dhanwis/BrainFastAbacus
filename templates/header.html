@@ -185,78 +185,63 @@
                         <i class="ri-close-fill"></i>
                     </button>
                 </div>
-                <div class="offcanvas-body ">
+                <div class="offcanvas-body">
                     <ul class="responsive-menu">
-    
-                        <li class="nav-item {% if current_page == 'home' %}active{% endif %}">
-                            <a href="{% url 'Homepage' %}" class="dropdown-toggle nav-link">
+                        <!-- Home -->
+                        <li class="nav-item {% if current_page == 'home' %}active{% endif %} mb-2">
+                            <a href="{% url 'Homepage' %}" class="nav-link">
                                 Home
                             </a>
                         </li>
                         
-                        <li class="nav-item  {% if current_page == 'about' %}active{% endif %}">
-                            <a href="{% url 'about' %}" class="dropdown-toggle nav-link">
+                        <!-- About Us -->
+                        <li class="nav-item {% if current_page == 'about' %}active{% endif %} mb-2">
+                            <a href="{% url 'about' %}" class="nav-link">
                                 About Us
                             </a>
-                           
                         </li>
-                            
-                           
-    
-                            <li class="nav-item  {% if current_page == 'abacuscourse' %}active{% endif %}">
-                                <a href="{% url 'abacuscourse' %}" class="dropdown-toggle nav-link">
-                                    Courses
-                                </a>
-                                <ul class="dropdown-menu">
-                                        <li class="nav-item ">
-                                        <a href="{% url 'abacuscourse' %}" class="nav-link">
-                                            Abacus Training
-                                        </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="program-details.html" class="nav-link">
-                                            Vedic Maths Training
-                                        </a>
-                                    </li>
-                                   
-                                </ul>
-                            </li>
-                            <li class="nav-item {% if current_page == 'event' %}active{% endif %}">
-                                <a href="{% url 'event' %}" class="nav-link">
-                                    Events
-                                </a>
-                               
-                            </li>
-    
-                            <li class="nav-item {% if current_page == 'gallery' %}active{% endif %}">
-                                <a href="{% url 'gallery' %}" class=" nav-link">
-                                    Gallery
-                                </a>
-                            </li>
-    
-    
-                            <li class="nav-item {% if current_page == 'contact' %}active{% endif %}">
-                                <a href="{% url 'contact' %}" class=" nav-link">
-                                    Contact 
-                                </a>
-                            </li>
                         
+                        <!-- Courses -->
+                        <li class="nav-item {% if current_page == 'abacuscourse' or current_page == 'vedicmath' %}active{% endif %} mb-2">
+                            <a href="{% url 'abacuscourse' %}" class="dropdown-toggle nav-link">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item mb-1">
+                                    <a href="{% url 'abacuscourse' %}" class="nav-link">
+                                        Abacus Training
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'vedicmath' %}" class="nav-link">
+                                        Vedic Maths Training
+                                    </a>
+                                </li>
                             </ul>
                         </li>
-
+                        
+                        <!-- Events -->
+                        <li class="nav-item {% if current_page == 'event' %}active{% endif %} mb-2">
+                            <a href="{% url 'event' %}" class="nav-link">
+                                Events
+                            </a>
+                        </li>
+                        
+                        <!-- Gallery -->
+                        <li class="nav-item {% if current_page == 'gallery' %}active{% endif %} mb-2">
+                            <a href="{% url 'gallery' %}" class="nav-link">
+                                Gallery
+                            </a>
+                        </li>
+                        
+                        <!-- Contact -->
+                        <li class="nav-item {% if current_page == 'contact' %}active{% endif %}">
+                            <a href="{% url 'contact' %}" class="nav-link">
+                                Contact
+                            </a>
+                        </li>
                     </ul>
-    
-                    <div class="others-option d-md-flex align-items-center">
-                        <div class="option-item">
-                            <form class="search-form">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Search Programs">
-                                    <button type="submit"><i class="ri-search-line"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
+            
             <!-- End Responsive Navbar Area -->

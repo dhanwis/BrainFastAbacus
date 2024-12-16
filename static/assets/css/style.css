@@ -1880,6 +1880,7 @@ Apply Area Style
   font-weight: bold;
   color: #002A5C;
 }
+
 .apply-content .apply-content-card .content h3 span {
   margin-right: 4px;
   color: var(--primaryColor);
@@ -4178,7 +4179,7 @@ blockquote:hover i {
 font-size: 40px;
 color: #d8271d;
 font-weight: bold;
-margin-left: 270px;
+margin-left: 170px;
 margin-top: -70px;
 } 
 .privacy-policy-content .cards {
@@ -4817,9 +4818,7 @@ Support Area CSS
   position: absolute;
   background-color: var(--blackColor);
 }
-.support-image img {
- 
-}
+
 .support-content {
   margin-bottom: 25px;
 }
