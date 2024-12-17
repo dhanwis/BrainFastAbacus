@@ -38,7 +38,7 @@
 <div class="event-area pt-90 pb-75">
     <div class="container">
         <div class="section-title text-center m-auto p-5" data-cues="slideInUp">
-            <h2>Upcoming Events</h2>
+            <h2>Our Events</h2>
         </div>
         <div class="row justify-content-center" data-cues="slideInUp">
             {% for event in page_obj %}
@@ -71,8 +71,8 @@
                     </li>
                 {% endif %}
                 {% for num in page_obj.paginator.page_range %}
-                <li class="page-item {% if page_obj.number == num %}active{% endif %}">
-                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                <li class="page-item ">
+                    <a class="page-link {% if page_obj.number == num %}active{% endif %}" href="?page={{ num }}">{{ num }}</a>
                 </li>
             {% endfor %}
                 {% if page_obj.has_next %}
