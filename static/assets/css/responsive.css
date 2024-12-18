@@ -121,10 +121,14 @@
   }
   .hero-content .title {
     margin-bottom: 25px;
+    
   }
   .hero-content .title h1 {
     font-size: 30px;
     margin-bottom: 15px;
+    
+    
+   
   }
   .hero-content .title p {
     font-size: 16px;
@@ -389,9 +393,13 @@
   }
   .facilities-content .title {
     margin-bottom: 20px;
+    
   }
   .facilities-content .title h2 {
     font-size: 26px;
+    
+   
+    
   }
   .facilities-content .facilities-info {
     margin-bottom: 20px;
@@ -1356,6 +1364,9 @@
   .hero-content .title h1 {
     font-size: 58px;
     margin-bottom: 20px;
+    
+    
+    
   }
   .hero-reviews {
     left: 0;
@@ -1866,6 +1877,8 @@
   .hero-content .title h1 {
     font-size: 76px;
     margin-bottom: 20px;
+ 
+    
   }
   .hero-reviews {
     left: 0;
@@ -2064,6 +2077,8 @@
   }
   .facilities-content .title h2 {
     font-size: 32px;
+    
+    
   }
   .facilities-content .facilities-info {
     margin-bottom: 25px;
@@ -2668,6 +2683,7 @@
   }
   .facilities-content.style-2 .title h2 {
     font-size: 36px;
+    
   }
   .facilities-content.style-3 {
     margin-left: 40px;
