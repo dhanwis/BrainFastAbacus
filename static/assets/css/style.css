@@ -59,6 +59,21 @@ Default Style
   --transition: .5s;
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+}
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 body {
   margin: 0;
   padding: 0;
@@ -1070,8 +1085,9 @@ Hero Area Style
   content: "";
   z-index: -1;
   position: absolute;
-  /*background: linear-gradient(90deg, rgba(0, 9, 41, 0.9) 31.2%, rgba(0, 9, 41, 0) 65.89%);*/
+  /* background: linear-gradient(90deg, rgba(0, 9, 41, 0.9) 31.2%, rgba(0, 9, 41, 0) 65.89%); */
 }
+
 
 .hero-content {
   max-width: 835px;
@@ -4193,8 +4209,8 @@ blockquote:hover i {
 font-size: 40px;
 color: #d8271d;
 font-weight: bold;
-margin-left: 140px;
-margin-top: -70px;
+margin-left: -23px;
+margin-top: -54px;
 } 
 .privacy-policy-content .cards {
   margin-bottom: 30px;
