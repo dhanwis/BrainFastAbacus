@@ -8,8 +8,10 @@ from django.core.paginator import Paginator
 def Home(Request):
     current_page = 'home'
     events = Event.objects.all()[:3]
+    newss=News.objects.all()
     context = {
         'events': events,
+        'newss':newss,
         'current_page':current_page
         
     }

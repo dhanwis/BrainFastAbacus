@@ -1,0 +1,45 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block content %}
+
+{% include 'admin/header.html' %}
+<div class="container-fluid py-4">
+    {% include 'admin/alert.html' %}
+    <div class="row">
+        <div class="col-md-12">
+        <div class="card">
+            <div class="card-header pb-0">
+            <div class="d-flex align-items-center">
+                <p class="mb-0">Add news</p>
+                <!-- <button class="btn btn-primary btn-sm ms-auto">Settings</button> -->
+            </div>
+            </div>
+            <div class="card-body">
+                <!-- <p class="text-uppercase text-sm">User Information</p> -->
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="id_description" class="form-control-label">Description:</label>
+                            <textarea name="description" maxlength="1000" class="form-control" ></textarea>
+                        </div>
+                        </div>
+                        <!-- <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="id_status" class="form-control-label">Status:</label>
+                                <input type="checkbox" name="status">
+                            </div>
+                        </div> -->
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <button class="btn btn-primary" type="submit">Add news</button>
+                        </div>
+                    </div>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+        
+</div>
+{% endblock content %}

@@ -26,6 +26,46 @@
             </div>
         </div>
         <!-- End Hero Area -->
+         <!-- Start Testimonial Area -->
+         <div class="testimonial-area pb-75">
+            <div class="container">
+                <div class="section-title text-center m-auto p-4">
+                    <h2>Our Latest News</h2>
+                </div>
+                <div class="testimonial-slider-info-2">
+                    <div class="swiper testimonial-slider-2">
+                        <div class="swiper-wrapper">
+                            {% for news in newss %}
+                            <div class="swiper-slide">
+                                <div class="testimonial-slider-item">
+                                    <p>{{ news.description }}</p>
+                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                        {% if news.image %}
+                                        <div class="user d-flex align-items-center mb-3">
+                                            <div class="image">
+                                                <img src="{{ news.image.url }}" class="img-fluid rounded-circle" alt="testimonial-image">
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                        <div class="quote-icon">
+                                            <i class="flaticon-quote"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="swiper-btn">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- End Testimonial Area -->
 
          <!-- Start Adma About Area -->
         <div class="adma-about-area pb-75">

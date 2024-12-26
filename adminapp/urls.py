@@ -14,7 +14,10 @@ urlpatterns = [
     path('eventedit/<int:event_id>',event_edit,name='eventedit'),
     path('event/<int:event_id>',event_view,name="eventview"),
     path('imagedelete/<int:image_id>',image_delete,name="imagedelete"),
-    path('eventdelete/<int:event_id>',event_delete,name="eventdelete")
+    path('eventdelete/<int:event_id>',event_delete,name="eventdelete"),
+    path('addnews/',news_add,name="newsadd"),
+    path('newslist/',news_list,name="newslist"),
+    path('newsedit/<int:news_id>/',news_edit,name="newsedit"),
     
     
     

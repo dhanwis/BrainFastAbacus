@@ -202,3 +202,60 @@ def event_delete(request, event_id):
     except Exception as e:
         messages.error(request, f'event deleting gallery: {e}')
         return redirect('eventlist')
+    
+    
+@login_required(login_url='/admin/login/')
+def news_add(request):
+    current_page = 'newsadd'
+    if request.method == 'POST':
+        description = request.POST.get('description')
+        try:
+            description=News(description=description)
+            
+            description.save()
+            messages.success(request, 'news added successfully')
+            return redirect('dashboard')
+        except Exception as e:
+            messages.error(request, f'Error adding newsadd: {e}')
+            return redirect('newsadd')
+        
+    context = {
+        'current_page': current_page,
+    } 
+    return render(request, 'admin/Addnewsdescription.html', context)
+
+@login_required(login_url='/admin/login/')    
+def news_list(request):
+    current_page = 'newslist'
+    newss = News.objects.all()
+    context = {
+        'current_page': current_page,
+        'newss': newss
+        }
+    return render(request, 'admin/newslist.html',context)
+
+
+@login_required(login_url='/admin/login/')   
+def news_edit(request, news_id):
+    current_page = 'newsedit'
+    try:
+        news = News.objects.get(id=news_id)
+    except News.DoesNotExist:
+        messages.error(request, 'event not found')
+        return redirect('newslist')
+
+    if request.method == 'POST':
+        try:
+            news.description = request.POST.get('description')
+            news.save()
+            messages.success(request, 'news edited successfully')
+            return redirect('newslist')
+        except Exception as e:
+            messages.error(request, f'Error editing news: {e}')
+            return redirect('newsedit', news_id=news.id) 
+
+    context = {
+        'current_page': current_page,
+        'news': news
+        }
+    return render(request, 'admin/newsedit.html', context)
