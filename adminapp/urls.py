@@ -18,6 +18,7 @@ urlpatterns = [
     path('addnews/',news_add,name="newsadd"),
     path('newslist/',news_list,name="newslist"),
     path('newsedit/<int:news_id>/',news_edit,name="newsedit"),
+    path('newsdelete/<int:news_id>/',news_delete,name="newsdelete"),
     
     
     

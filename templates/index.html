@@ -37,18 +37,21 @@
                         <div class="swiper-wrapper">
                             {% for news in newss %}
                             <div class="swiper-slide">
-                                <div class="testimonial-slider-item">
-                                    <p>{{ news.description }}</p>
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                        {% if news.image %}
-                                        <div class="user d-flex align-items-center mb-3">
-                                            <div class="image">
-                                                <img src="{{ news.image.url }}" class="img-fluid rounded-circle" alt="testimonial-image">
-                                            </div>
-                                        </div>
-                                        {% endif %}
-                                        <div class="quote-icon">
-                                            <i class="flaticon-quote"></i>
+                                <div class="testimonial-slider-item" 
+                                     style="display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap; min-height: 200px; padding: 20px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                    {% if news.image %}
+                                    <div class="image" style="margin-right: 15px;">
+                                        <img src="{{ news.image.url }}" alt="testimonial-image" 
+                                             style="width: 143px; height: 138px; object-fit: cover; display: block;margin-bottom: 28px;">
+                                    </div>
+                                    
+                                    {% endif %}
+                                    <div class="content" style="flex: 1;">
+                                        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #333;">
+                                            {{ news.description }}
+                                        </p>
+                                        <div class="quote-icon" style="margin-top: 15px;">
+                                            <i class="flaticon-quote" style="font-size: 24px; color: #fa394a;"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -63,6 +66,7 @@
                 </div>
             </div>
         </div>
+        
         
         
         <!-- End Testimonial Area -->

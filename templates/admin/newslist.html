@@ -7,61 +7,64 @@
   {% include 'admin/alert.html' %}
   <div class="row">
     <div class="col-12">
-      <div class="card mb-4">
-        <div class="card-header pb-0">
-          <div class="row">
-              <div class="col-6 d-flex align-items-center">
-                <h6 class="mb-0">Event List</h6>
-              </div>
-              <div class="col-6 text-end">
-                  <a href="{% url 'newsadd' %}">
-                      <button class="btn btn-primary btn-sm mb-0">Add news</button>
-                  </a>
-                
-              </div>
-          </div>
-        </div>
-        <div class="card-body px-0 pt-0 pb-2">
-          <div class="table-responsive p-0">
-            <table class="table align-items-center mb-0">
-              <thead>
-                  <tr class="text-center">
-                    <th scope="col">#</th>
-                    <th scope="col">description</th>
-                    <!-- <th>Status</th> -->
-                    <th scope="col">Action</th>
-                    
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for news in newss %}
-                  <tr class="text-center">
-                    <th scope="row">{{ forloop.counter }}</th>
-                    <td>{{news.description}}</td>
-                    <td>
-                      <span>
-                        <a href="{% url 'newsedit' news.id %}">
-                          <i class="bi bi-pencil-square"></i>
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <div class="row">
+                    <div class="col-6 d-flex align-items-center">
+                        <h6 class="mb-0">Event List</h6>
+                    </div>
+                    <div class="col-6 text-end">
+                        <a href="{% url 'newsadd' %}">
+                            <button class="btn btn-primary btn-sm mb-0">Add news</button>
                         </a>
-                      </span>
-                      <span>
-                        <a href="" 
-                          onclick="return confirm('Do you want to delete this event?')">
-                          <i class="bi bi-trash3-fill text-danger"></i>
-                        </a>
-                      </span>
-                    </td>
-                  </tr>
-                  {% endfor %}
-                </tbody>
-            </table>
-          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table align-items-center mb-0">
+                        <thead>
+                            <tr class="text-center">
+                                <th scope="col">#</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for news in newss %}
+                            <tr class="text-center">
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td>{{ news.description }}</td>
+                                <td>
+                                    {% if news.image %}
+                                    <img src="{{ news.image.url }}" alt="News Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
+                                    {% else %}
+                                    <span>No Image</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <span>
+                                        <a href="{% url 'newsedit' news.id %}">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                    </span>
+                                    <span>
+                                        <a href="{% url 'newsdelete' news.id %}" onclick="return confirm('Do you want to delete this event?')">
+                                            <i class="bi bi-trash3-fill text-danger"></i>
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  
 </div>
+
 </main>
 
 {% endblock content %}
