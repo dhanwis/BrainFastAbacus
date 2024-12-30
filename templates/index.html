@@ -30,15 +30,16 @@
          <div class="container mt-3" style="width: 100%; overflow-x: hidden;">
             <div
               id="newsContainer"
-              style="display: flex; font-size: 20px; width: max-content; animation-name: infiniteScroll; animation-duration: 20s; animation-iteration-count: infinite; animation-timing-function: linear;">
+              style="display: flex; font-size: 20px; width: max-content; animation: infiniteScroll 20s linear infinite;">
               {% for news in newss %}
               <div class="news-item" style="white-space: nowrap; display: flex; align-items: center; margin-right: 50px;">
                 <img src="{% static 'assets/img/logo new3.png' %}" alt="Logo" style="margin-right: 10px; width: 24px; height: 24px;">
-                <span>{{ news.description}}</span>
+                <span>{{ news.description }}</span>
               </div>
               {% endfor %}
             </div>
         </div>
+        
           
         
         
