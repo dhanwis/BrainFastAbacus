@@ -67,10 +67,9 @@ def event_add(request):
     current_page = 'eventadd'
     if request.method == 'POST':
         image = request.FILES.get('image') 
-        head = request.POST.get('head')
         description = request.POST.get('description')
         try:
-            event= Event(image=image,head=head,description=description)
+            event= Event(image=image,description=description)
             event.save()
             messages.success(request, 'event added successfully')
             return redirect('dashboard')
@@ -134,7 +133,6 @@ def event_edit(request, event_id):
     if request.method == 'POST':
         try:
             image = request.FILES.get('image')
-            event.head = request.POST.get('head')
             event.description = request.POST.get('description')
             
 
@@ -209,9 +207,8 @@ def news_add(request):
     current_page = 'newsadd'
     if request.method == 'POST':
         description = request.POST.get('description')
-        image = request.FILES.get('image')  # Retrieve the uploaded image
         try:
-            news = News(description=description, image=image)  # Save description and image
+            news = News(description=description)  # Save description and image
             news.save()
             messages.success(request, 'News added successfully')
             return redirect('dashboard')
@@ -247,11 +244,6 @@ def news_edit(request, news_id):
     if request.method == 'POST':
         try:
             news.description = request.POST.get('description')
-            
-            # Handle the uploaded image (optional update)
-            if 'image' in request.FILES:
-                news.image = request.FILES.get('image')
-            
             news.save()
             messages.success(request, 'News edited successfully')
             return redirect('newslist')

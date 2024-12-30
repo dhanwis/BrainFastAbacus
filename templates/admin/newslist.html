@@ -27,7 +27,6 @@
                             <tr class="text-center">
                                 <th scope="col">#</th>
                                 <th scope="col">Description</th>
-                                <th scope="col">Image</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -36,13 +35,6 @@
                             <tr class="text-center">
                                 <th scope="row">{{ forloop.counter }}</th>
                                 <td>{{ news.description }}</td>
-                                <td>
-                                    {% if news.image %}
-                                    <img src="{{ news.image.url }}" alt="News Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
-                                    {% else %}
-                                    <span>No Image</span>
-                                    {% endif %}
-                                </td>
                                 <td>
                                     <span>
                                         <a href="{% url 'newsedit' news.id %}">
