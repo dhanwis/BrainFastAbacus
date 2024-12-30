@@ -1,0 +1,384 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+{% include 'header.html' %}
+       <!-- Start Hero Area -->
+        <div class="hero-area">
+            <div class="container-fluid" data-cues="slideInUp">
+                <div class="hero-content">
+                    <div class="title">
+                        <h1> A World-Classes ABACUS <br>Training For Your Better Future</h1>
+                      
+                    </div>
+                    <ul class="list-unstyled ps-0 mb-0 hero-btn">
+                        <li class="d-inline-block">
+                            <a class="text-decoration-none default-btn" href="university-overview.html">
+                                View Our Programs
+                                <i class="flaticon-right-arrow"></i>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+        <!-- End Hero Area -->
+         <!-- Start Testimonial Area -->
+         <div class="testimonial-area pb-75">
+            <div class="container">
+                <div class="section-title text-center m-auto p-4">
+                    <h2>Our Latest News</h2>
+                </div>
+                <div class="testimonial-slider-info-2">
+                    <div class="swiper testimonial-slider-2">
+                        <div class="swiper-wrapper">
+                            {% for news in newss %}
+                            <div class="swiper-slide">
+                                <div class="testimonial-slider-item" 
+                                     style="display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap; min-height: 200px; padding: 20px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                    {% if news.image %}
+                                    <div class="image" style="margin-right: 15px;">
+                                        <img src="{{ news.image.url }}" alt="testimonial-image" 
+                                             style="width: 143px; height: 138px; object-fit: cover; display: block;margin-bottom: 28px;">
+                                    </div>
+                                    
+                                    {% endif %}
+                                    <div class="content" style="flex: 1;">
+                                        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #333;">
+                                            {{ news.description }}
+                                        </p>
+                                        <div class="quote-icon" style="margin-top: 15px;">
+                                            <i class="flaticon-quote" style="font-size: 24px; color: #fa394a;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="swiper-btn">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- End Testimonial Area -->
+
+         <!-- Start Adma About Area -->
+        <div class="adma-about-area pb-75">
+            <div class="container">
+                <div class="row align-items-center" data-cues="slideInUp">
+                    <div class="col-lg-7">
+                        <div class="adma-about-content">
+                            <div class="title">
+                                <h2 class="d-flex align-items-center">
+                                    <img src="{% static 'assets/img/title-shape.png' %}" alt="title-shape">
+                                    About BrainFast Abacus 
+                                </h2>
+                                <p>Brainfast Abacus & Vedics is an educational program designed to enhance mathematical skills in students
+through the use of the abacus, an ancient calculating tool. The program focuses on developing mental
+arithmetic abilities, improving concentration, and boosting overall cognitive skills. By using the abacus,
+students learn to visualize numbers and calculations, which helps them perform arithmetic operations
+quickly and accurately. Brainfast Abacus aims to build a strong foundation in math for students, making the
+learning process engaging and effective.
+ </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="adma-about-card">
+                                        <h3 class="d-flex align-items-center">
+                                            <i class="flaticon-globe-1"></i>
+                                            Our Mission
+                                        </h3>
+                                        <p>Our mission is to empower young minds with exceptional mathematical skills and cognitive
+abilities through innovative and engaging abacus training. We are committed to providing a
+supportive and nurturing learning environment that fosters confidence, concentration, creativity,
+and a lifelong love for learning. Our goal is to help 10,00,000 students unlock their full potential
+and achieve academic excellence.</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="adma-about-card">
+                                        <h3 class="d-flex align-items-center">
+                                            <i class="flaticon-trophy"></i>
+                                            Our Vision
+                                        </h3>
+                                        <p>Our vision at Brainfast Abacus & Vedic Maths is to become a globally recognized leader in Abacus
+and Vedic education, inspiring and transforming the lives of students worldwide. We envision a
+future where every child has the opportunity to excel in mathematics and develop critical thinking
+skills that will serve them in all areas of life. </p>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="adma-about-image text-end">
+                            <img src="{% static 'assets/img/about/about-2.jpg' %}" alt="about-image">
+                            <div class="shape-3">
+                                <img src="{% static 'assets/img/shape/shape-3.png' %}" alt="shape-3">
+                            </div>
+                            <div class="shape-4">
+                                <img src="{% static 'assets/img/shape/shape-4.png' %}" alt="shape-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Adma About Area -->
+
+        <!-- Start Graduates Area -->
+        <div class="graduates-area pb-100">
+            <div class="container">
+                <div class="section-title text-center m-auto pb-5">
+                    <h2>  BrainFast Training Programme </h2>
+                </div>
+                <div class="row g-0 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-graduates-card">
+                            <h3 class="d-flex align-items-center">
+                                <i class="flaticon-science-1"></i>
+                                BrainFast Vedic Maths
+                            </h3>
+                            <p>Vedic Maths is an ancient system of mathematics that originated in India. It consists 
+of techniques and principles for solving mathematical problems in a faster and more 
+efficient manner compared to conventional methods.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-graduates-card" style="background-color:#dfc65e;">
+                            <h3 class="d-flex align-items-center">
+                                <i class="flaticon-mortarboard"></i>
+                                Brainfast Abacus
+                            </h3>
+                            <p>ABACUS make your brain stronger. Abacus is just not about math, it also helps you to develop Brain. When you need to do a lot of abacus, your brain cell connection grow from one cell to another.</p>
+                            <ul class="list-unstyled ps-0 mb-0 list">
+                               
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-graduates-card">
+                            <h3 class="d-flex align-items-center">
+                                <i class="flaticon-abc-block"></i>
+                               Abacus TTC
+                            </h3>
+                            <p> Brain Fast offers quick and step by step abacus teacher training course at a reasonable cost which is affordable to all. It has been prepared by the industry experts and the trainers & students are doing this course globally.</p>
+                            <ul class="list-unstyled ps-0 mb-0 list">
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Graduates Area -->
+        
+        
+
+        <!-- Start Apply Area -->
+        <div class="apply-area pt-100 pb-75">
+            <div class="container">
+                <div class="row align-items-center" data-cues="slideInUp">
+                    <!-- Image Section -->
+                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                        <div class="apply-image text-center text-lg-start">
+                            <div class="image">
+                                <img class="img-fluid" src="{% static 'assets/img/apply/apply-1.jpg' %}" alt="apply-image">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Content Section -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="apply-content">
+                            <div class="title text-center text-lg-start">
+                                <h2>What We Offer</h2>
+                            </div>
+                            <!-- Content Cards -->
+                            <div class="apply-content-card d-flex mb-3">
+                                <div class="icon me-3">
+                                    <i class="flaticon-abacus"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <span>01.</span> Abacus & Vedic Maths Training
+                                    </h3>
+                                    <p>Our specialized abacus training programs are designed to improve mental calculation abilities, enhance concentration, and boost overall cognitive skills.</p>
+                                </div>
+                            </div>
+                            <div class="apply-content-card d-flex mb-3">
+                                <div class="icon me-3">
+                                    <i class="flaticon-abacus"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <span>02.</span> Experienced Instructors
+                                    </h3>
+                                    <p>Our team of expert instructors is passionate about teaching and committed to helping each student reach their full potential.</p>
+                                </div>
+                            </div>
+                            <div class="apply-content-card d-flex mb-3">
+                                <div class="icon me-3">
+                                    <i class="flaticon-abacus"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <span>03.</span> Interactive Learning
+                                    </h3>
+                                    <p>We use a combination of traditional and modern teaching methods to make learning engaging and enjoyable.</p>
+                                </div>
+                            </div>
+                            <div class="apply-content-card d-flex mb-3">
+                                <div class="icon me-3">
+                                    <i class="flaticon-abacus"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <span>04.</span> Personalized Attention
+                                    </h3>
+                                    <p>We understand that every student is unique, so we provide personalized attention to cater to individual learning needs.</p>
+                                </div>
+                            </div>
+                            <!-- Call to Action Button -->
+                            <div class="apply-btn text-center text-lg-start mt-4">
+                                <a class="text-decoration-none default-btn" href="application.html">
+                                    Chat With Us
+                                    <i class="flaticon-right-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- End Apply Area -->
+
+        <!-- Start Events Area -->
+        <div class="events-area pb-75">
+            <div class="container">
+                <div class="section-title text-center m-auto" data-cues="slideInUp">
+                    <h2>Events & Gallery</h2>
+                </div>
+                <div class="row justify-content-center" data-cues="slideInUp" id="events-container">
+                    {% for event in events %}
+                        <div class="col-lg-4 col-md-6 {% if forloop.counter > 3 %}hidden{% endif %}">
+                            <div class="single-events-card">
+                                <a class="text-decoration-none d-block image" href="#">
+                                    <img src="{{ event.image.url }}" alt="{{ event.title }}">
+                                </a>
+                                <div class="content d-flex align-items-top">
+                                    
+                                    <div class="title">
+                                        <h3>
+                                            <a class="text-decoration-none" href="#">{{ event.description }}</a>
+                                        </h3>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="text-center mt-4">
+                    <a href="{% url 'event' %}"  id="view-more-btn" class="btn btn-outline-danger">View More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- End Events Area -->
+
+			
+
+        <!-- Start Facilities Area -->
+        <div class="facilities-area pb-75">
+            <div class="container">
+                <div class="row align-items-center" data-cues="slideInUp">
+                    <div class="col-lg-6">
+                        <div class="facilities-content">
+                            <div class="title">
+                                <h2 >Why Choose Us?</h2>
+                                <p>Join us at Brainfast Abacus & Vedics and be a part of our journey to create a generation of math
+enthusiasts and problem solvers. Together, we can unlock the true potential of young minds and
+pave the way for a brighter future.</p>
+                            </div>
+                            <div class="facilities-info">
+                                <h3>
+                                    <span>01.</span>
+                                   Proven Track Record
+                                </h3>
+                                <p>With years of experience and countless success stories, Brainfast Abacus
+Hub has established itself as a trusted name in math education.
+</p>
+                            </div>
+                            <div class="facilities-info">
+                                <h3>
+                                    <span>02.</span>
+                                    Holistic Development
+                                </h3>
+                                <p>Our programs are designed not just to improve math skills but also to
+enhance overall cognitive development.
+
+</p>
+                            </div>
+							
+							<div class="facilities-info">
+                                <h3>
+                                    <span>03.</span>
+                                    Community Focus
+                                </h3>
+                                <p>We are committed to making a positive impact in our community by offering
+affordable and accessible education to all students.</p>
+                            </div>
+                           <div class="d-inline-block">
+                                <a class="text-decoration-none default-btn" href="#">
+                                    Application Form
+                                    <i class="flaticon-right-arrow"></i>
+                                </a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="facilities-image">
+                            <img src="{% static 'assets/img/facilities/facilities-1.jpg' %}" alt="facilities-image">
+                            <div class="facilities-image-info">
+                                <i class="flaticon-quote"></i>
+                                <p>Incorporating Vedic Maths into the training at Brainfast Abacus & Vedic Hub can 
+help students achieve a higher level of mathematical proficiency and confidence, 
+aligning with your mission to help 1000,000 students excel in math</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Facilities Area -->
+
+        <!-- Start Testimonial Area -->
+        <div class="testimonial-area pb-98 mt-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="testimonial-image">
+                            <img src="{% static 'assets/img/testimonial/prospecture.jpg' %}" alt="testimonial-image" class="img-fluid w-100" style="object-fit: cover;" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- End Testimonial Area -->
+
+        {% endblock content %}
