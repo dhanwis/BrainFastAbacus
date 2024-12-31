@@ -27,13 +27,13 @@
         </div>
         <!-- End Hero Area -->
          <!-- Start Testimonial Area -->
-         <div class="container mt-3" style="width: 100%; overflow-x: hidden;">
+         <div class="container mt-3 mb-3" style="width: 100%; overflow-x: hidden; background-color:#f14d5d;">
             <div
               id="newsContainer"
-              style="display: flex; font-size: 20px; width: max-content; animation: infiniteScroll 20s linear infinite;">
+              style="display: flex; font-size: 25px; width: max-content; animation: infiniteScroll 20s linear infinite;color: white;">
               {% for news in newss %}
-              <div class="news-item" style="white-space: nowrap; display: flex; align-items: center; margin-right: 50px;">
-                <img src="{% static 'assets/img/logo new3.png' %}" alt="Logo" style="margin-right: 10px; width: 24px; height: 24px;">
+              <div class="news-item" style="display: flex; align-items: center; margin-right: 50px;">
+                <img src="{% static 'assets/img/logo new3.png' %}" alt="Logo" style="margin-right: 10px; width: 30px; height: 24px;">
                 <span>{{ news.description }}</span>
               </div>
               {% endfor %}

@@ -109,41 +109,17 @@
   <div class="card mt-5">
     <div class="card-body">
         <h3 class="pb-3">Pages</h3>
-        <ul style="list-style: none;">
-            <li class="pb-2">
-                
-                <span>
-                    <button class="btn btn-primary" onclick="window.location.href='{% url 'dashboard' %}'">Dashboard</button>
-                </span>
-            </li>
-
-            <li class="pb-2">
-                {% comment %} <span style="color: green;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-                    </svg>
-                </span> {% endcomment %}
-                <span>
-                    <button class="btn btn-success" onclick="window.location.href='{% url 'imageadd' %}'">Image Add</button>
-                </span>
-            </li>
-
-            <li class="pb-2">
-                
-                <span>
-                    <button class="btn btn-danger" onclick="window.location.href='{% url 'eventadd' %}'">Event Add</button>
-                </span>
-            </li>
-
-            <li class="pb-2">
-                
-                <span>
-                    <button class="btn btn-info" onclick="window.location.href='{% url 'newsadd' %}'">News Add</button>
-                </span>
-            </li>
-        </ul>
+        <div class="d-flex gap-3 mb-2">
+            <button class="btn btn-primary btn-lg flex-grow-1" onclick="window.location.href='{% url 'dashboard' %}'">Dashboard</button>
+            <button class="btn btn-success btn-lg flex-grow-1" onclick="window.location.href='{% url 'imageadd' %}'">Image Add</button>
+            <button class="btn btn-warning btn-lg flex-grow-1" onclick="window.location.href='{% url 'eventadd' %}'">Event Add</button>
+        </div>
+        <div>
+            <button class="btn btn-info btn-lg flex-grow-1" onclick="window.location.href='{% url 'newsadd' %}'">News Add</button>
+        </div>
     </div>
 </div>
+
 
      
 </main>
