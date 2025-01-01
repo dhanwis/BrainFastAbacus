@@ -81,6 +81,7 @@ def abacuscourse(request):
     current_page='abacuscourse'
     return render(request,'abacuscourse.html',{'current_page':current_page})
 
+
 def vedicmath(request):
     current_page='vedicmath'
     return render(request,'vedicmath.html',{'current_page':current_page})

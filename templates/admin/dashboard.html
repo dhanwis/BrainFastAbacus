@@ -1,5 +1,4 @@
 
-
 {% extends "admin/base.html" %}
 {% load static %}
 {% block content %}
@@ -109,18 +108,12 @@
   <div class="card mt-5">
     <div class="card-body">
         <h3 class="pb-3">Pages</h3>
-        <div class="d-flex gap-3 mb-2">
-            <button class="btn btn-primary btn-lg flex-grow-1" onclick="window.location.href='{% url 'dashboard' %}'">Dashboard</button>
-            <button class="btn btn-success btn-lg flex-grow-1" onclick="window.location.href='{% url 'imageadd' %}'">Image Add</button>
-            <button class="btn btn-warning btn-lg flex-grow-1" onclick="window.location.href='{% url 'eventadd' %}'">Event Add</button>
-        </div>
-        <div>
-            <button class="btn btn-info btn-lg flex-grow-1" onclick="window.location.href='{% url 'newsadd' %}'">News Add</button>
+        <div class="d-flex gap-3 mb-2 flex-wrap">
+            <button class="btn btn-success btn-lg flex-grow-1" style="height: 80px;" onclick="window.location.href='{% url 'imageadd' %}'">Image Add</button>
+            <button class="btn btn-warning btn-lg flex-grow-1" style="height: 80px;" onclick="window.location.href='{% url 'eventadd' %}'">Event Add</button>
+            <button class="btn btn-primary btn-lg flex-grow-1" style="height: 80px;" onclick="window.location.href='{% url 'newsadd' %}'">News Add</button>
         </div>
     </div>
 </div>
-
-
-     
 </main>
 {% endblock content %}

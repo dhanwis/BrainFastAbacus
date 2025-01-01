@@ -3,6 +3,7 @@
 {% block content %}
 
 {% include 'header.html' %}
+    
        <!-- Start Hero Area -->
         <div class="hero-area">
             <div class="container-fluid" data-cues="slideInUp">
@@ -27,19 +28,16 @@
         </div>
         <!-- End Hero Area -->
          <!-- Start Testimonial Area -->
-         <div class="container mt-3 mb-3" style="width: 100%; overflow-x: hidden; background-color:#f14d5d;">
-            <div
-              id="newsContainer"
-              style="display: flex; font-size: 25px; width: max-content; animation: infiniteScroll 20s linear infinite;color: white;">
-              {% for news in newss %}
-              <div class="news-item" style="display: flex; align-items: center; margin-right: 50px;">
-                <img src="{% static 'assets/img/logo new3.png' %}" alt="Logo" style="margin-right: 10px; width: 30px; height: 24px;">
-                <span>{{ news.description }}</span>
-              </div>
-              {% endfor %}
+         <div class="container">
+         <marquee behavior="scroll" direction="left" scrollamount="13" style="background-color: #f14d5d; color: white; font-size: 25px; overflow: hidden; width: 100%; padding: 10px;" >
+            {% for news in newss %}
+            <div class="news-item" style="display: inline-flex; align-items: center; margin-right: 50px;">
+              <img src="{% static 'assets/img/Abacus Logo1.jpg' %}" alt="Logo" style="margin-right: 10px; width: 30px; height: 24px;">
+              <span>{{ news.description }}</span>
             </div>
+            {% endfor %}
+          </marquee>
         </div>
-        
           
         
         
