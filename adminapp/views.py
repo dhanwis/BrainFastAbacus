@@ -8,11 +8,13 @@ from django.contrib import messages
 def dashboard(Request):
     image_count = Gallery.objects.count()
     event_count = Event.objects.count()
+    news_count=News.objects.count()
     current_page = 'dashboard'
     context = {
         'current_page': current_page,
         'image_count':image_count,
-        'event_count':event_count
+        'event_count':event_count,
+        'news_count':news_count
     } 
     
     return render(Request,'admin/dashboard.html', context)
