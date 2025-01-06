@@ -1069,7 +1069,7 @@ Hero Area Style
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url(../img/bg/bg-1.jpg);
+  background-image: url(../img/bg/bg5.jpg);
   padding-top: 190px;
   padding-bottom: 225px;
 }
@@ -1096,14 +1096,17 @@ Hero Area Style
 .hero-content .title {
   margin-bottom: 45px;
 
+  
+
 }
 
 .hero-content .title h1 {
     font-size: 63px;
     line-height: 1.2;     
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     color: #193782;
     font-weight: bold;
+    
     
     
 }
@@ -2000,7 +2003,7 @@ Events Area Style
 }
 
 .single-events-card {
-  padding: 20px;
+  padding: 15px;
   margin-bottom: 25px;
   transition: var(--transition);
   background-color: var(--whiteColor);
