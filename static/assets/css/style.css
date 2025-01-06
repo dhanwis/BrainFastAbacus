@@ -2003,7 +2003,7 @@ Events Area Style
 }
 
 .single-events-card {
-  padding: 15px;
+  padding: 0px;
   margin-bottom: 25px;
   transition: var(--transition);
   background-color: var(--whiteColor);
