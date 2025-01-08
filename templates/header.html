@@ -101,7 +101,7 @@
                         
                        
 
-                        <li class="nav-item {% if current_page == 'abacuscourse' or current_page == 'vedicmath' %}active{% endif %}">
+                        <li class="nav-item {% if current_page == 'abacuscourse' or current_page == 'vedicmath' or current_page == 'abacusttc' %} active{% endif %}">
                             <a href="{% url 'abacuscourse' %}" class="dropdown-toggle nav-link">
                                 Courses
                             </a>
@@ -116,8 +116,8 @@
                                         Vedic Maths Training
                                     </a>
                                 </li>
-                                <li class="nav-item ">
-                                    <a href="program-details.html" class="nav-link">
+                                <li class="nav-item {% if current_page == 'abacusttc' %}active{% endif %} ">
+                                    <a href="{% url 'abacusttc' %}" class="nav-link">
                                         Abacus TTC
                                     </a>
                                 </li>

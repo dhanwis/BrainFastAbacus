@@ -11,6 +11,7 @@ urlpatterns = [
     path('contact/',contact,name="contact"),
     path('abacuscourse/',abacuscourse,name="abacuscourse"),
     path('vedicmath/',vedicmath,name="vedicmath"),
+    path('abacusttc/',abacusttc,name="abacusttc")
     
     
     
