@@ -202,7 +202,7 @@
                         </li>
                         
                         <!-- Courses -->
-                        <li class="nav-item dropdown {% if current_page == 'abacuscourse' or current_page == 'vedicmath' %}active{% endif %} mb-2 text-decoration-none">
+                        <li class="nav-item dropdown{% if current_page == 'abacuscourse' or current_page == 'vedicmath' or current_page == 'abacusttc' %} active{% endif %} mb-2 text-decoration-none">
                             <a href="{% url 'abacuscourse' %}" class="nav-link dropdown-toggle" id="coursesDropdown" role="button" data-bs-toggle="dropdown">
                                 Courses
                             </a>
@@ -217,8 +217,8 @@
                                         Vedic Maths Training
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="program-details.html" class="dropdown-item">
+                                <li class="nav-item {% if current_page == 'abacusttc' %}active{% endif %} ">
+                                    <a href="{% url 'abacusttc' %}" class="dropdown-item">
                                         Abacus TTC
                                     </a>
                                 </li>

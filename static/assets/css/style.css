@@ -59,7 +59,9 @@ Default Style
   --paragraphColor: #555;
   --transition: .5s;
 }
-
+.head1{
+  text-align: center;
+}
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
   opacity: 1;
@@ -271,6 +273,47 @@ Default Btn
 /*=========================================
 Section Title Style
 ===========================================*/
+
+.responsive-heading {
+  font-size: 1.75rem; /* Default for medium to large screens */
+}
+
+@media (max-width: 992px) {
+  .responsive-heading {
+      font-size: 1.5rem; /* Adjust for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-heading {
+      font-size: 1.25rem; /* Adjust for smaller devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .responsive-heading {
+      font-size: 1rem; /* Adjust for very small devices */
+  }
+}
+
+.card-title1 {
+  color:  #d8271d; /* Highlight color for the card titles */
+  font-weight: bold;
+  width: 100%;
+  align-items: center;
+  font-size: 19px;
+  
+}
+.card-text1{
+  font-size: 15px;
+}
+.cardhead1{
+  font-weight: bold;
+  color: #002A5C;
+  font-size: 35px;
+
+
+}
 .section-title {
   max-width: 610px;
   margin-bottom: 35px !important;
