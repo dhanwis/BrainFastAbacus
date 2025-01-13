@@ -404,6 +404,7 @@ Top Header Area Style
   font-size: 13px;
   line-height: 1;
   color: #ffff;
+  font-weight: bold;
 }
 .top-header-social-list ul li .pages-link li a:hover {
   color: var(--primaryColor);
