@@ -129,6 +129,7 @@
     font-size: 30px;
     margin-bottom: 15px;
     color:white;
+    margin-right:-15px;
     
   }
   .hero-content .title p {
@@ -1880,7 +1881,7 @@
     font-size: 76px;
     margin-bottom: 20px;
    color: white;
- 
+
     
   }
   .hero-reviews {
