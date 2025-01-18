@@ -89,3 +89,7 @@ def vedicmath(request):
 def abacusttc(request):
     current_page='abacusttc'
     return render(request,'abacusttc.html',{'current_page':current_page})
+
+def vedictcc(request):
+    current_page='vedicttc'
+    return render(request,'vedicttc.html',{'current_page':current_page})
