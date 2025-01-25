@@ -1,10 +1,11 @@
+
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
 
 {% include 'header.html' %}
        <!-- Start Hero Area -->
-        <div class="hero-area">
+        <div class="hero-area" >
             <div class="container-fluid" data-cues="slideInUp">
                 <div class="hero-content">
                     <div class="title">
@@ -26,7 +27,7 @@
             </div>
         </div>
         <!-- End Hero Area -->
-         <!-- Start Testimonial Area -->
+         <!-- Start news Area -->
          <div class="container-fluid">
             <marquee behavior="scroll" direction="left" scrollamount="13" style="background-color: #f14d5d; color: white; font-size: 25px; overflow: hidden; width: 100%; padding: 10px;" >
                {% for news in newss %}
@@ -36,11 +37,11 @@
                </div>
                {% endfor %}
              </marquee>
-           </div>
+        </div>
           
         
         
-        <!-- End Testimonial Area -->
+        <!-- End news Area -->
 
          <!-- Start Adma About Area -->
         <div class="adma-about-area pb-75">
@@ -49,17 +50,17 @@
                     <div class="col-lg-7">
                         <div class="adma-about-content">
                             <div class="title">
-                                <h2 class="d-flex align-items-center">
-                                    <img src="{% static 'assets/img/title-shape.png' %}" alt="title-shape">
+                                <h2 class="d-flex align-items-center responsive-title">
+                                    <img src="{% static 'assets/img/title-shape.png' %}" alt="title-shape" class="title-icon" width="50px">
                                     About BrainFast Abacus 
                                 </h2>
                                 <p>Brainfast Abacus & Vedics is an educational program designed to enhance mathematical skills in students
-through the use of the abacus, an ancient calculating tool. The program focuses on developing mental
-arithmetic abilities, improving concentration, and boosting overall cognitive skills. By using the abacus,
-students learn to visualize numbers and calculations, which helps them perform arithmetic operations
-quickly and accurately. Brainfast Abacus aims to build a strong foundation in math for students, making the
-learning process engaging and effective.
- </p>
+                                   hrough the use of the abacus, an ancient calculating tool. The program focuses on developing mental
+                                   arithmetic abilities, improving concentration, and boosting overall cognitive skills. By using the abacus,
+                                    students learn to visualize numbers and calculations, which helps them perform arithmetic operations
+                                    quickly and accurately. Brainfast Abacus aims to build a strong foundation in math for students, making the
+                                    learning process engaging and effective.
+                                </p>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
@@ -69,10 +70,10 @@ learning process engaging and effective.
                                             Our Mission
                                         </h3>
                                         <p>Our mission is to empower young minds with exceptional mathematical skills and cognitive
-abilities through innovative and engaging abacus training. We are committed to providing a
-supportive and nurturing learning environment that fosters confidence, concentration, creativity,
-and a lifelong love for learning. Our goal is to help 10,00,000 students unlock their full potential
-and achieve academic excellence.</p>
+                                        abilities through innovative and engaging abacus training. We are committed to providing a
+                                        supportive and nurturing learning environment that fosters confidence, concentration, creativity,
+                                        and a lifelong love for learning. Our goal is to help 10,00,000 students unlock their full potential
+                                        and achieve academic excellence.</p>
                                         
                                     </div>
                                 </div>
@@ -83,9 +84,9 @@ and achieve academic excellence.</p>
                                             Our Vision
                                         </h3>
                                         <p>Our vision at Brainfast Abacus & Vedic Maths is to become a globally recognized leader in Abacus
-and Vedic education, inspiring and transforming the lives of students worldwide. We envision a
-future where every child has the opportunity to excel in mathematics and develop critical thinking
-skills that will serve them in all areas of life. </p>
+                                            and Vedic education, inspiring and transforming the lives of students worldwide. We envision a
+                                            future where every child has the opportunity to excel in mathematics and develop critical thinking
+                                            skills that will serve them in all areas of life. </p>
                                        
                                     </div>
                                 </div>
@@ -122,8 +123,8 @@ skills that will serve them in all areas of life. </p>
                                 BrainFast Vedic Maths
                             </h3>
                             <p>Vedic Maths is an ancient system of mathematics that originated in India. It consists 
-of techniques and principles for solving mathematical problems in a faster and more 
-efficient manner compared to conventional methods.</p>
+                            of techniques and principles for solving mathematical problems in a faster and more 
+                            efficient manner compared to conventional methods.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
@@ -230,7 +231,7 @@ efficient manner compared to conventional methods.</p>
                 </div>
             </div>
         </div>
-    </div>
+    
         <!-- End Apply Area -->
 
         <!-- Start Events Area -->
@@ -281,8 +282,8 @@ efficient manner compared to conventional methods.</p>
                             <div class="title">
                                 <h2 >Why Choose Us?</h2>
                                 <p>Join us at Brainfast Abacus & Vedics and be a part of our journey to create a generation of math
-enthusiasts and problem solvers. Together, we can unlock the true potential of young minds and
-pave the way for a brighter future.</p>
+                                    enthusiasts and problem solvers. Together, we can unlock the true potential of young minds and
+                                    pave the way for a brighter future.</p>
                             </div>
                             <div class="facilities-info">
                                 <h3>
@@ -290,8 +291,8 @@ pave the way for a brighter future.</p>
                                    Proven Track Record
                                 </h3>
                                 <p>With years of experience and countless success stories, Brainfast Abacus
-Hub has established itself as a trusted name in math education.
-</p>
+                                    Hub has established itself as a trusted name in math education.
+                                    </p>
                             </div>
                             <div class="facilities-info">
                                 <h3>
@@ -299,9 +300,9 @@ Hub has established itself as a trusted name in math education.
                                     Holistic Development
                                 </h3>
                                 <p>Our programs are designed not just to improve math skills but also to
-enhance overall cognitive development.
+                                enhance overall cognitive development.
 
-</p>
+                                </p>
                             </div>
 							
 							<div class="facilities-info">
@@ -310,7 +311,7 @@ enhance overall cognitive development.
                                     Community Focus
                                 </h3>
                                 <p>We are committed to making a positive impact in our community by offering
-affordable and accessible education to all students.</p>
+                                affordable and accessible education to all students.</p>
                             </div>
                            <div class="d-inline-block">
                                 <a class="text-decoration-none default-btn" href="#">
@@ -326,8 +327,8 @@ affordable and accessible education to all students.</p>
                             <div class="facilities-image-info">
                                 <i class="flaticon-quote"></i>
                                 <p>Incorporating Vedic Maths into the training at Brainfast Abacus & Vedic Hub can 
-help students achieve a higher level of mathematical proficiency and confidence, 
-aligning with your mission to help 1000,000 students excel in math</p>
+                                    help students achieve a higher level of mathematical proficiency and confidence, 
+                                    aligning with your mission to help 1000,000 students excel in math</p>
                             </div>
                         </div>
                     </div>
@@ -337,20 +338,20 @@ aligning with your mission to help 1000,000 students excel in math</p>
         <!-- End Facilities Area -->
 
         <!-- Start Testimonial Area -->
-        <div class="testimonial-area pb-98 mt-2">
+        <div class="testimonial-area pb-98 mt-0">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
                         <div class="testimonial-image">
-                            <img src="{% static 'assets/img/testimonial/prospecture.jpg' %}" alt="testimonial-image" class="img-fluid w-100" style="object-fit: cover;" loading="lazy">
+                            <img src="{% static 'assets/img/testimonial/pros.jpg' %}" alt="testimonial-image" class="img-fluid w-100" style="object-fit: cover;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+    </div>      
         
         
         <!-- End Testimonial Area -->
 
-        {% endblock content %}
+{% endblock content %}
