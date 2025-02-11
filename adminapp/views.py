@@ -74,9 +74,9 @@ def event_add(request):
             event= Event(image=image,description=description)
             event.save()
             messages.success(request, 'event added successfully')
-            return redirect('eventlist')
+            return redirect('eventlist ')
         except Exception as e:
-            messages.error(request, f'Error adding event: {e}')
+            # messages.error(request, f'Error adding event: {e}')
             return redirect('eventadd')
         
     context = {

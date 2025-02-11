@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 
 def Home(Request):
     current_page = 'home'
-    events = Event.objects.all()[:3]
+    events = Event.objects.all().order_by('-id')[:3]
     newss=News.objects.all()
     context = {
         'events': events,
@@ -40,7 +40,7 @@ def admin_login(request):
 
 def gallery(request):
     current_page = 'gallery'
-    events = Gallery.objects.all() # Fetch events in descending order of creation
+    events = Gallery.objects.all().order_by('-id')  # Fetch events in descending order of creation
     paginator = Paginator(events, 9)  # 9 events per page
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -60,7 +60,7 @@ def about(request):
 
 def event(request):
     current_page = 'event'
-    events = Event.objects.all() # Fetch events in descending order of creation
+    events = Event.objects.all().order_by('-id') # Fetch events in descending order of creation
     paginator = Paginator(events, 9)  # 9 events per page
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
